@@ -54,6 +54,18 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-color);
@@ -85,29 +97,48 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
+        }
+
+        .hero-photo-container {
+            margin-bottom: 2rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-photo:hover {
+            transform: scale(1.05);
         }
 
         .hero h1 {
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
         }
 
         .hero .subtitle {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             opacity: 0.95;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
         }
 
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
         }
 
         .social-links {
@@ -115,7 +146,7 @@
             gap: 1.5rem;
             justify-content: center;
             margin-top: 2rem;
-            animation: fadeInUp 0.8s ease-out 0.6s both;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
         }
 
         .social-links a {
@@ -158,6 +189,38 @@
             background: var(--primary-color);
             margin: 1rem auto 0;
             border-radius: 2px;
+        }
+
+        /* About Section with Logo */
+        .about-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .about-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .sharif-logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: center;
         }
 
         /* Research Interests */
@@ -445,6 +508,11 @@
                 font-size: 1.2rem;
             }
 
+            .hero-photo {
+                width: 150px;
+                height: 150px;
+            }
+
             .nav-links {
                 gap: 1rem;
             }
@@ -459,6 +527,11 @@
 
             .timeline {
                 padding-left: 1.5rem;
+            }
+
+            .sharif-logo {
+                width: 80px;
+                height: 80px;
             }
         }
 
@@ -493,13 +566,26 @@
                 display: flex;
             }
         }
+
+        /* Placeholder for images if not loaded */
+        .img-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-light);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
     </style>
 </head>
 <body>
     <!-- Navigation -->
     <header>
         <nav>
-            <div class="logo">KS</div>
+            <div class="logo">
+                <img src="images/sharif-logo.png" alt="Sharif Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">KS</span>
+            </div>
             <button class="menu-toggle" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </button>
@@ -517,6 +603,9 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-photo-container">
+                <img src="images/profile.jpg" alt="Kasra Siavashpour" class="hero-photo" onerror="this.src='https://via.placeholder.com/180?text=KS'">
+            </div>
             <h1>Kasra Siavashpour</h1>
             <p class="subtitle">Computer Science Researcher</p>
             <p>B.Sc. Student at Sharif University of Technology<br>
@@ -535,8 +624,15 @@
         <!-- About Section -->
         <section id="about">
             <h2 class="section-title">About Me</h2>
-            <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-md); text-align: center; max-width: 800px; margin: 0 auto;">
-                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+            <div class="about-content">
+                <div class="about-header">
+                    <img src="images/sharif-logo.png" alt="Sharif University of Technology" class="sharif-logo" onerror="this.style.display='none'">
+                    <div>
+                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">Sharif University of Technology</h3>
+                        <p style="color: var(--text-secondary);">B.Sc. Computer Science | 2020–2025</p>
+                    </div>
+                </div>
+                <p class="about-text">
                     I'm a final-year Computer Science student at <strong>Sharif University of Technology</strong>, 
                     passionate about solving complex networking challenges in IoT, autonomous systems, and distributed computing. 
                     My research focuses on <strong>energy-efficient routing protocols</strong>, <strong>cluster-based optimization</strong>, 
