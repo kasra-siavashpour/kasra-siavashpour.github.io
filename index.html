@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasra Siavashpour | Computer Science Researcher</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #3b82f6;
+            --text-primary: #1f2937;
+            --text-secondary: #6b7280;
+            --bg-light: #f9fafb;
+            --bg-white: #ffffff;
+            --border-color: #e5e7eb;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-light);
+        }
+
+        /* Header/Navigation */
+        header {
+            background: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-top: 2rem;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 1.8rem;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            opacity: 0.8;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Research Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .interest-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .interest-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .interest-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .interest-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        /* Publications */
+        .publication {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .publication .authors {
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .publication .title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .publication .venue {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--bg-white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 1.5rem;
+            color: white;
+        }
+
+        .project-header h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header .tech-stack {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .project-body li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        .project-body li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: gap 0.3s;
+        }
+
+        .project-link:hover {
+            gap: 0.8rem;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 3px solid var(--bg-white);
+            box-shadow: 0 0 0 3px var(--border-color);
+        }
+
+        .timeline-content {
+            background: var(--bg-white);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .timeline-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .timeline-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .timeline-org {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .skill-category h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .skill-tag {
+            background: var(--bg-light);
+            color: var(--text-primary);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s;
+        }
+
+        .skill-tag:hover {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--bg-white);
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: var(--shadow-md);
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">KS</div>
+            <button class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Kasra Siavashpour</h1>
+            <p class="subtitle">Computer Science Researcher</p>
+            <p>B.Sc. Student at Sharif University of Technology<br>
+            Specializing in IoT Networks, Autonomous Systems & Performance Engineering</p>
+            <div class="social-links">
+                <a href="mailto:kasra.siavashpour@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://github.com/kasra-sia" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kasra-siavashpour" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="cv.pdf" target="_blank" title="Download CV"><i class="fas fa-file-pdf"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Section -->
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div style="background: var(--bg-white); padding: 2rem; border-radius: 12px; box-shadow: var(--shadow-md); text-align: center; max-width: 800px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-secondary);">
+                    I'm a final-year Computer Science student at <strong>Sharif University of Technology</strong>, 
+                    passionate about solving complex networking challenges in IoT, autonomous systems, and distributed computing. 
+                    My research focuses on <strong>energy-efficient routing protocols</strong>, <strong>cluster-based optimization</strong>, 
+                    and <strong>systems performance engineering</strong>. I've had the privilege of working with research groups at 
+                    Sharif and <strong>Politecnico di Milano</strong>, exploring cutting-edge solutions for modern network infrastructures.
+                </p>
+            </div>
+        </section>
+
+        <!-- Research Interests -->
+        <section id="research">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <i class="fas fa-network-wired"></i>
+                    <h3>IoT Networking</h3>
+                    <p>Designing scalable and efficient protocols for Internet of Things devices and networks.</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-plane"></i>
+                    <h3>FANET/VANET</h3>
+                    <p>Flying and vehicular ad-hoc networks for autonomous aerial and vehicular systems.</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Cluster-Based Routing</h3>
+                    <p>SDN and ML-assisted optimization for efficient routing in dynamic environments.</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Low-Latency Protocols</h3>
+                    <p>Energy-aware network protocols for real-time, resource-constrained systems.</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-code"></i>
+                    <h3>WebAssembly</h3>
+                    <p>Performance engineering with WASM for networked workloads and system acceleration.</p>
+                </div>
+                <div class="interest-card">
+                    <i class="fas fa-server"></i>
+                    <h3>Distributed Systems</h3>
+                    <p>Building reliable, decentralized cooperative systems with formal guarantees.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications -->
+        <section id="publications">
+            <h2 class="section-title">Publications</h2>
+            <div class="publication">
+                <div class="authors">
+                    Prof. Arash Vaezi†, Prof. Amir Daneshgar†, <strong>Kasra Siavashpour</strong>, Arshia Dadras
+                </div>
+                <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
+                <div class="venue">Manuscript in preparation for IEEE FOCS 2025</div>
+                <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;">
+                    † Co-lead authors (equal contribution)
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-title">Notable Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>BitTorrent-style P2P Network</h3>
+                        <div class="tech-stack">Python • Networking • Distributed Systems</div>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Peer discovery and direct connections beyond centralized tracker</li>
+                            <li>Validated piece exchange and failure handling</li>
+                            <li>CLI client with documented protocol flows</li>
+                        </ul>
+                        <a href="https://github.com/kasra-sia/BitTorrent-network" class="project-link" target="_blank">
+                            View on GitHub <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Innovative Sort</h3>
+                        <div class="tech-stack">Java • Algorithms • Performance</div>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Benchmarked classical sorting algorithms</li>
+                            <li>Custom variant outperforming Java's default on large arrays</li>
+                            <li>Complexity analysis and empirical results</li>
+                        </ul>
+                        <a href="https://github.com/kasra-sia/MySuperSort" class="project-link" target="_blank">
+                            View on GitHub <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Golabi Social Media</h3>
+                        <div class="tech-stack">Java • GUI • MVC Architecture</div>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Posts, messaging, media, and follow graph features</li>
+                            <li>MVC pattern with code-style checks</li>
+                            <li>Local persistence and user documentation</li>
+                        </ul>
+                        <a href="https://github.com/kasra-sia/Golabi_social_media-network" class="project-link" target="_blank">
+                            View on GitHub <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Battleship Network Game</h3>
+                        <div class="tech-stack">Java • Networking • GUI</div>
+                    </div>
+                    <div class="project-body">
+                        <ul>
+                            <li>Networked multiplayer gameplay</li>
+                            <li>Enhanced features with clean-code practices</li>
+                            <li>Real-time communication between players</li>
+                        </ul>
+                        <a href="https://github.com/kasra-sia/Battleship-network-game" class="project-link" target="_blank">
+                            View on GitHub <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Experience -->
+        <section id="experience">
+            <h2 class="section-title">Research Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-title">Research Assistant</div>
+                                <div class="timeline-org">Sharif University of Technology</div>
+                            </div>
+                            <div class="timeline-date">June 2023 – Present</div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Supervisor:</strong> Dr. Bardia Safaei</p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Designed nature-inspired routing for FANET/IoT with cluster-based heuristics
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Benchmarked link stability and latency under mobility scenarios
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Built reproducible pipelines for experiment configurations and reruns
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="timeline-title">Research Assistant</div>
+                                <div class="timeline-org">Politecnico di Milano</div>
+                            </div>
+                            <div class="timeline-date">March 2024 – Present</div>
+                        </div>
+                        <p style="color: var(--text-secondary); margin-bottom: 0.5rem;"><strong>Supervisor:</strong> Dr. Gianni Antichi</p>
+                        <ul style="list-style: none; padding-left: 0;">
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Investigated WebAssembly for systems/runtime acceleration
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Profiled CPU/memory performance vs. native baselines
+                            </li>
+                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
+                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
+                                Developed measurement harnesses for network-adjacent tasks
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-title">Skills & Technologies</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">Go</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">LaTeX</span>
+                        <span class="skill-tag">NS-3</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Ubuntu</span>
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">macOS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Persian (Native)</span>
+                        <span class="skill-tag">English (C1)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Kasra Siavashpour. All rights reserved.</p>
+        <p style="margin-top: 0.5rem;">
+            <a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a> | 
+            <a href="tel:+989120763679">+98 912 076 3679</a>
+        </p>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('navLinks').classList.remove('active');
+                }
+            });
+        });
+
+        // Add scroll animation to sections
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
