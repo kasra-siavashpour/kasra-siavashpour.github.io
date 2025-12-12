@@ -8,7 +8,7 @@
 
     <!-- SEO -->
     <meta name="description" content="Kasra Siavashpour — Computer Science Researcher. Networking, Distributed Systems, IoT, FANET/VANET, and cluster-based routing." />
-    <link rel="canonical" href="https://kasra-sia.github.io/" />
+    <link rel="canonical" href="https://kasra-siavashpour.github.io/" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
 
     <!-- Google Search Console verification (uncomment + paste your code) -->
@@ -17,9 +17,9 @@
     <!-- Social previews (optional but nice) -->
     <meta property="og:title" content="Kasra Siavashpour | Computer Science Researcher" />
     <meta property="og:description" content="Networking • Distributed Systems • IoT • Autonomous Systems" />
-    <meta property="og:url" content="https://kasra-sia.github.io/" />
+    <meta property="og:url" content="https://kasra-siavashpour.github.io/" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://kasra-sia.github.io/images/profile.jpg" />
+    <meta property="og:image" content="https://kasra-siavashpour.github.io/images/profile.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Structured Data -->
@@ -30,7 +30,7 @@
       "mainEntity": {
         "@type": "Person",
         "name": "Kasra Siavashpour",
-        "url": "https://kasra-sia.github.io/",
+        "url": "https://kasra-siavashpour.github.io/",
         "sameAs": [
           "https://github.com/kasra-sia",
           "https://www.linkedin.com/in/kasra-siavashpour"
@@ -348,7 +348,7 @@
         /* Projects */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1_toggle.max_results, 1fr));
             gap: 2rem;
         }
 
@@ -1316,8 +1316,7 @@
             });
         }, observerOptions);
 
-        // IMPORTANT SEO-friendly tweak:
-        // Only animate sections inside .container (don't hide the hero on initial load)
+        // SEO-friendly tweak: only animate sections inside .container (don't hide the hero initially)
         document.querySelectorAll('.container section').forEach(section => {
             section.style.opacity = '0';
             section.style.transform = 'translateY(30px)';
