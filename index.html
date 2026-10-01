@@ -1,1347 +1,713 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kasra Siavashpour</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kasra Siavashpour | Computer Science Researcher</title>
+  <meta name="description" content="Kasra Siavashpour, researcher at the Institute for Research in Fundamental Sciences (IPM). Distributed and decentralized systems, multi-agent systems, IoT and AI-driven network automation.">
+  <link rel="canonical" href="https://kasra-siavashpour.github.io/">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="color-scheme" content="light dark">
 
-    <!-- SEO -->
-    <meta name="description" content="Kasra Siavashpour — Computer Science Researcher. Networking, Distributed Systems, IoT, FANET/VANET, and cluster-based routing." />
-    <link rel="canonical" href="https://kasra-siavashpour.github.io/" />
-    <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta property="og:title" content="Kasra Siavashpour">
+  <meta property="og:description" content="Researcher at IPM. Systems that organize themselves: fair multi-agent routing, decentralized cooperation and self-organizing networks.">
+  <meta property="og:url" content="https://kasra-siavashpour.github.io/">
+  <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://kasra-siavashpour.github.io/images/profile.jpg">
+  <meta name="twitter:card" content="summary">
 
-    <!-- Google Search Console verification (uncomment + paste your code) -->
-    <!-- <meta name="google-site-verification" content="PASTE_YOUR_CODE_HERE" /> -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Kasra Siavashpour",
+      "url": "https://kasra-siavashpour.github.io/",
+      "image": "https://kasra-siavashpour.github.io/images/profile.jpg",
+      "jobTitle": "Researcher",
+      "worksFor": {
+        "@type": "ResearchOrganization",
+        "name": "Institute for Research in Fundamental Sciences (IPM)"
+      },
+      "alumniOf": {
+        "@type": "CollegeOrUniversity",
+        "name": "Sharif University of Technology"
+      },
+      "knowsAbout": ["Distributed systems", "Decentralized systems", "Multi-agent systems", "Internet of Things", "Network automation"],
+      "sameAs": [
+        "https://github.com/kasra-sia",
+        "https://www.linkedin.com/in/kasra-siavashpour"
+      ]
+    }
+  }
+  </script>
 
-    <!-- Social previews (optional but nice) -->
-    <meta property="og:title" content="Kasra Siavashpour | Computer Science Researcher" />
-    <meta property="og:description" content="Networking • Distributed Systems • IoT • Autonomous Systems" />
-    <meta property="og:url" content="https://kasra-siavashpour.github.io/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://kasra-siavashpour.github.io/images/profile.jpg" />
-    <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Kasra Siavashpour",
-        "url": "https://kasra-siavashpour.github.io/",
-        "sameAs": [
-          "https://github.com/kasra-sia",
-          "https://www.linkedin.com/in/kasra-siavashpour"
-        ],
-        "jobTitle": "Computer Science Researcher",
-        "affiliation": {
-          "@type": "CollegeOrUniversity",
-          "name": "Sharif University of Technology"
-        }
+  <style>
+    :root {
+      --bg: #faf8f4;
+      --surface: #ffffff;
+      --surface-2: #f3efe8;
+      --ink: #1c1f23;
+      --muted: #5c6470;
+      --faint: #8a919b;
+      --line: #e4ded4;
+      --accent: #a3401c;
+      --accent-soft: #f6e6dd;
+      --accent-ink: #8a3415;
+      --chip: #eef1f4;
+      --chip-ink: #3d4652;
+      --ok: #2f6b4f;
+      --ok-soft: #e3f0e8;
+      --plan: #6a5a1e;
+      --plan-soft: #f4eed9;
+      --shadow: 0 1px 2px rgba(28, 31, 35, .04), 0 4px 16px rgba(28, 31, 35, .05);
+      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+      --wrap: 920px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #131518;
+        --surface: #1a1d21;
+        --surface-2: #20242a;
+        --ink: #ebe8e2;
+        --muted: #a3abb5;
+        --faint: #7d858f;
+        --line: #2c3138;
+        --accent: #e8825a;
+        --accent-soft: #3a261d;
+        --accent-ink: #f0a07f;
+        --chip: #252a31;
+        --chip-ink: #c9d0d8;
+        --ok: #8fd0ad;
+        --ok-soft: #1f3329;
+        --plan: #e0cd85;
+        --plan-soft: #33301f;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
       }
     }
-    </script>
-
-    <!-- Performance hints -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        :root {
-            --primary-color: #2563eb;
-            --secondary-color: #1e40af;
-            --accent-color: #3b82f6;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --bg-light: #f9fafb;
-            --bg-white: #ffffff;
-            --border-color: #e5e7eb;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--bg-light);
-        }
-
-        /* Header/Navigation */
-        header {
-            background: var(--bg-white);
-            box-shadow: var(--shadow-sm);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            object-fit: contain;
-        }
-
-        .logo-text {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-secondary);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Active nav link (your JS toggles this) */
-        .nav-links a.active {
-            color: var(--primary-color);
-            font-weight: 700;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .hero-photo-container {
-            margin-bottom: 2rem;
-            animation: fadeInUp 0.8s ease-out;
-        }
-
-        .hero-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 5px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
-        .hero-photo:hover {
-            transform: scale(1.05);
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            animation: fadeInUp 0.8s ease-out 0.2s both;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            opacity: 0.95;
-            animation: fadeInUp 0.8s ease-out 0.4s both;
-        }
-
-        .hero p {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-            animation: fadeInUp 0.8s ease-out 0.6s both;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-            margin-top: 2rem;
-            animation: fadeInUp 0.8s ease-out 0.8s both;
-        }
-
-        .social-links a {
-            color: white;
-            font-size: 1.8rem;
-            transition: transform 0.3s, opacity 0.3s;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px);
-            opacity: 0.8;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-
-        /* Section Styles */
-        section {
-            margin-bottom: 5rem;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--text-primary);
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary-color);
-            margin: 1rem auto 0;
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about-content {
-            background: var(--bg-white);
-            padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .about-header {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .sharif-logo {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
-            text-align: center;
-        }
-
-        /* Research Interests */
-        .interests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .interest-card {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid var(--border-color);
-        }
-
-        .interest-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .interest-card i {
-            font-size: 2.5rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .interest-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-primary);
-        }
-
-        /* Publications */
-        .publication {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            border-left: 4px solid var(--primary-color);
-            margin-bottom: 2rem;
-        }
-
-        .publication .title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 0.75rem;
-        }
-
-        .publication .authors {
-            color: var(--text-secondary);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        .publication .venue {
-            color: var(--primary-color);
-            font-weight: 600;
-            font-size: 1rem;
-            margin-top: 0.5rem;
-        }
-
-        .publication .note {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-style: italic;
-            margin-top: 0.5rem;
-        }
-
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1_toggle.max_results, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-white);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-md);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid var(--border-color);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .project-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            padding: 1.5rem;
-            color: white;
-        }
-
-        .project-header h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-header .date {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-header .tech-stack {
-            font-size: 0.9rem;
-            opacity: 0.9;
-        }
-
-        .project-body {
-            padding: 1.5rem;
-        }
-
-        .project-body ul {
-            list-style: none;
-            margin-bottom: 1rem;
-        }
-
-        .project-body li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
-        }
-
-        .project-body li::before {
-            content: '▹';
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            transition: gap 0.3s;
-        }
-
-        .project-link:hover {
-            gap: 0.8rem;
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 2px;
-            background: var(--border-color);
-        }
-
-        .timeline-item {
-            position: relative;
-            padding-bottom: 3rem;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -2.5rem;
-            top: 0;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: var(--primary-color);
-            border: 3px solid var(--bg-white);
-            box-shadow: 0 0 0 3px var(--border-color);
-        }
-
-        .timeline-content {
-            background: var(--bg-white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .timeline-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: start;
-            margin-bottom: 1rem;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .timeline-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .timeline-date {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .timeline-org {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
-
-        .timeline-supervisor {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Teaching Experience */
-        .teaching-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .teaching-card {
-            background: var(--bg-white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .teaching-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .teaching-card h3 {
-            color: var(--primary-color);
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .teaching-card .instructor {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .teaching-card .semester {
-            color: var(--text-primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .teaching-card ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .teaching-card li {
-            padding-left: 1.5rem;
-            position: relative;
-            margin-bottom: 0.4rem;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .teaching-card li::before {
-            content: '•';
-            position: absolute;
-            left: 0.5rem;
-            color: var(--primary-color);
-        }
-
-        /* Awards */
-        .awards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .award-card {
-            background: var(--bg-white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: start;
-            gap: 1rem;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .award-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .award-icon {
-            font-size: 2rem;
-            color: var(--primary-color);
-        }
-
-        .award-content h3 {
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin-bottom: 0.3rem;
-        }
-
-        .award-content .year {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 600;
-        }
-
-        /* Skills */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .skill-category {
-            background: var(--bg-white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow-md);
-        }
-
-        .skill-category h3 {
-            font-size: 1.3rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-        }
-
-        .skill-tag {
-            background: var(--bg-light);
-            color: var(--text-primary);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            border: 1px solid var(--border-color);
-            transition: all 0.3s;
-        }
-
-        .skill-tag:hover {
-            background: var(--primary-color);
-            color: white;
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
-        footer {
-            background: var(--text-primary);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-
-        footer a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        footer a:hover {
-            color: white;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero-photo {
-                width: 150px;
-                height: 150px;
-            }
-
-            .nav-links {
-                gap: 1rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .projects-grid,
-            .teaching-grid,
-            .awards-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .timeline {
-                padding-left: 1.5rem;
-            }
-
-            .sharif-logo {
-                width: 80px;
-                height: 80px;
-            }
-
-            .timeline-header {
-                flex-direction: column;
-            }
-        }
-
-        /* Mobile Menu Toggle */
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            cursor: pointer;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--bg-white);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: var(--shadow-md);
-                display: none;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-        }
-    </style>
+    :root[data-theme="dark"] {
+      --bg: #131518;
+      --surface: #1a1d21;
+      --surface-2: #20242a;
+      --ink: #ebe8e2;
+      --muted: #a3abb5;
+      --faint: #7d858f;
+      --line: #2c3138;
+      --accent: #e8825a;
+      --accent-soft: #3a261d;
+      --accent-ink: #f0a07f;
+      --chip: #252a31;
+      --chip-ink: #c9d0d8;
+      --ok: #8fd0ad;
+      --ok-soft: #1f3329;
+      --plan: #e0cd85;
+      --plan-soft: #33301f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 16px rgba(0, 0, 0, .25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    a { color: var(--accent-ink); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible, button:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px;
+    }
+    .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 16px; }
+
+    /* ---------- Nav ---------- */
+    .topbar {
+      position: sticky; top: 0; z-index: 10;
+      background: var(--bg);
+      background: color-mix(in srgb, var(--bg) 88%, transparent);
+      backdrop-filter: saturate(140%) blur(10px);
+      -webkit-backdrop-filter: saturate(140%) blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .wrap { display: flex; align-items: center; gap: 16px; height: 56px; }
+    .brand { font-family: var(--serif); font-weight: 600; font-size: 1.05rem; color: var(--ink); white-space: nowrap; }
+    .brand:hover { text-decoration: none; }
+    .nav {
+      display: flex; gap: 4px; margin-left: auto; overflow-x: auto; scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+              mask-image: linear-gradient(to right, #000 85%, transparent);
+    }
+    .nav::-webkit-scrollbar { display: none; }
+    .nav a {
+      font-size: .875rem; color: var(--muted); padding: 6px 10px; border-radius: 999px; white-space: nowrap;
+    }
+    .nav a:hover, .nav a.active { color: var(--ink); background: var(--surface-2); text-decoration: none; }
+    .theme-toggle {
+      border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+      width: 34px; height: 34px; border-radius: 999px; cursor: pointer; flex: none;
+      display: grid; place-items: center;
+    }
+    .theme-toggle:hover { color: var(--ink); }
+    @media (min-width: 760px) {
+      .nav { -webkit-mask-image: none; mask-image: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 56px 0 40px; }
+    .hero .wrap { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+    @media (min-width: 760px) {
+      .hero .wrap { grid-template-columns: 1fr 260px; gap: 48px; }
+    }
+    .eyebrow {
+      font-family: var(--mono); font-size: .78rem; letter-spacing: .04em; color: var(--accent-ink);
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: var(--serif); font-weight: 700; letter-spacing: -.01em;
+      font-size: clamp(2.2rem, 6vw, 3.2rem); line-height: 1.1; margin: 10px 0 18px;
+    }
+    .lead {
+      font-family: var(--serif); font-size: clamp(1.15rem, 2.4vw, 1.35rem); line-height: 1.5;
+      color: var(--ink); margin-bottom: 16px;
+    }
+    .hero p + p { margin-top: 12px; }
+    .hero .body { color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; font-size: .9rem; font-weight: 500;
+      padding: 9px 14px; border-radius: 10px; border: 1px solid var(--line);
+      background: var(--surface); color: var(--ink);
+    }
+    .btn:hover { text-decoration: none; border-color: var(--faint); }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    :root[data-theme="dark"] .btn.primary { color: #1a0e08; }
+    @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .btn.primary { color: #1a0e08; } }
+    .btn.primary:hover { filter: brightness(1.05); }
+
+    .portrait { position: relative; width: 240px; aspect-ratio: 1; margin: 0 auto; }
+    .portrait img {
+      position: absolute; inset: 12.5%; width: 75%; height: 75%; object-fit: cover; object-position: 50% 20%;
+      border-radius: 50%; border: 4px solid var(--surface); box-shadow: var(--shadow);
+    }
+    .ring { position: absolute; inset: 0; width: 100%; height: 100%; color: var(--accent); }
+    @media (max-width: 759px) {
+      .hero { padding-top: 32px; }
+      .portrait { order: -1; width: 168px; margin: 0; }
+    }
+    .ring .orbit { transform-origin: 120px 120px; animation: spin 90s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .ring .orbit { animation: none; } }
+
+    .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; list-style: none; }
+    .interests li {
+      font-size: .82rem; padding: 4px 10px; border-radius: 999px; background: var(--chip); color: var(--chip-ink);
+    }
+
+    /* ---------- Sections ---------- */
+    section.block { padding: 44px 0; border-top: 1px solid var(--line); }
+    .section-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 22px; flex-wrap: wrap; }
+    .section-head h2 { font-family: var(--serif); font-size: 1.6rem; font-weight: 600; letter-spacing: -.005em; }
+    .section-head .kicker { font-family: var(--mono); font-size: .75rem; color: var(--faint); }
+    .section-head .more { margin-left: auto; font-size: .9rem; }
+
+    /* News */
+    .news { list-style: none; display: grid; gap: 2px; }
+    .news li { display: grid; grid-template-columns: 84px 1fr; gap: 16px; padding: 8px 0; }
+    .news time { font-family: var(--mono); font-size: .8rem; color: var(--faint); padding-top: 3px; }
+
+    /* Research threads */
+    .threads { display: grid; gap: 16px; }
+    @media (min-width: 760px) { .threads { grid-template-columns: repeat(3, 1fr); } }
+    .thread {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 20px;
+      display: flex; flex-direction: column; box-shadow: var(--shadow);
+    }
+    .thread .num { font-family: var(--mono); font-size: .75rem; color: var(--accent-ink); }
+    .thread h3 { font-family: var(--serif); font-size: 1.2rem; line-height: 1.3; margin: 6px 0 4px; }
+    .thread .project { font-size: .82rem; color: var(--faint); margin-bottom: 10px; }
+    .thread p { font-size: .93rem; color: var(--muted); }
+    .thread .figure {
+      font-family: var(--serif); font-size: 1.05rem; color: var(--ink); margin: 14px 0 0;
+      padding-top: 12px; border-top: 1px dashed var(--line);
+    }
+    .thread .figure strong { color: var(--accent-ink); font-weight: 700; }
+    .thread .links { margin-top: auto; padding-top: 14px; display: flex; gap: 14px; flex-wrap: wrap; font-size: .87rem; }
+    .earlier { margin-top: 20px; color: var(--muted); font-size: .95rem; }
+
+    /* Publications */
+    .pub-group { font-family: var(--mono); font-size: .75rem; color: var(--faint); text-transform: uppercase; letter-spacing: .05em; margin: 4px 0 10px; }
+    .pub-group:not(:first-of-type) { margin-top: 26px; }
+    .pub {
+      display: grid; grid-template-columns: 1fr; gap: 6px; padding: 16px 0; border-bottom: 1px solid var(--line);
+    }
+    .pub:last-child { border-bottom: 0; }
+    .pub .title { font-family: var(--serif); font-size: 1.1rem; font-weight: 600; line-height: 1.35; }
+    .pub .authors { font-size: .92rem; color: var(--muted); }
+    .pub .authors strong { color: var(--ink); font-weight: 600; }
+    .pub .meta { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; font-size: .88rem; }
+    .status { font-size: .74rem; font-weight: 600; padding: 2px 9px; border-radius: 999px; }
+    .status.review { background: var(--ok-soft); color: var(--ok); }
+    .status.prep { background: var(--plan-soft); color: var(--plan); }
+    .venue { color: var(--muted); }
+    details.abstract summary {
+      cursor: pointer; font-size: .88rem; color: var(--accent-ink); list-style: none; display: inline-flex; align-items: center; gap: 6px;
+    }
+    details.abstract summary::-webkit-details-marker { display: none; }
+    details.abstract summary::before { content: "+"; font-family: var(--mono); }
+    details.abstract[open] summary::before { content: "\2212"; }
+    details.abstract .text {
+      margin-top: 10px; padding: 14px 16px; background: var(--surface-2); border-radius: 10px;
+      font-size: .92rem; color: var(--muted); line-height: 1.7;
+    }
+    details.abstract .text p + p { margin-top: 10px; }
+
+    /* Experience timeline */
+    .timeline { list-style: none; position: relative; }
+    .timeline::before { content: ""; position: absolute; left: 6px; top: 8px; bottom: 8px; width: 1px; background: var(--line); }
+    .timeline > li { position: relative; padding: 0 0 22px 30px; }
+    .timeline > li::before {
+      content: ""; position: absolute; left: 0; top: 7px; width: 13px; height: 13px; border-radius: 50%;
+      background: var(--bg); border: 2px solid var(--faint);
+    }
+    .timeline > li.current::before { border-color: var(--accent); background: var(--accent); }
+    .timeline .when { font-family: var(--mono); font-size: .78rem; color: var(--faint); }
+    .timeline h3 { font-size: 1rem; font-weight: 600; margin-top: 2px; }
+    .timeline .org { color: var(--muted); font-weight: 400; }
+    .timeline p { font-size: .93rem; color: var(--muted); margin-top: 4px; }
+    .timeline .people { font-size: .87rem; margin-top: 4px; color: var(--muted); }
+    .edu {
+      display: flex; gap: 14px; align-items: center; margin-top: 8px; padding: 14px 16px;
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    }
+    .edu img { width: 40px; height: 40px; object-fit: contain; flex: none; }
+    .edu .t { font-weight: 600; }
+    .edu .s { font-size: .9rem; color: var(--muted); }
+
+    /* Teaching */
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 22px; }
+    .stat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px; }
+    .stat .n { font-family: var(--serif); font-size: 1.8rem; font-weight: 700; line-height: 1; color: var(--accent-ink); }
+    .stat .l { font-size: .82rem; color: var(--muted); margin-top: 6px; }
+    .courses { display: grid; gap: 16px; }
+    @media (min-width: 700px) { .courses { grid-template-columns: 1fr 1fr; } }
+    .course { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; }
+    .course h3 { font-family: var(--serif); font-size: 1.1rem; margin-bottom: 8px; }
+    .course ul { list-style: none; }
+    .course li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-top: 1px solid var(--line); font-size: .9rem; }
+    .course li:first-child { border-top: 0; }
+    .course li span:last-child { font-family: var(--mono); font-size: .78rem; color: var(--faint); white-space: nowrap; padding-top: 2px; }
+    .teach-note { margin-top: 16px; font-size: .93rem; color: var(--muted); }
+
+    /* Projects */
+    .projects { display: grid; gap: 14px; }
+    @media (min-width: 700px) { .projects { grid-template-columns: 1fr 1fr; } }
+    .proj {
+      display: block; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; color: var(--ink);
+      transition: border-color .15s ease, transform .15s ease;
+    }
+    .proj:hover { text-decoration: none; border-color: var(--faint); transform: translateY(-1px); }
+    @media (prefers-reduced-motion: reduce) { .proj, .proj:hover { transition: none; transform: none; } }
+    .proj .top { display: flex; justify-content: space-between; gap: 10px; align-items: baseline; }
+    .proj h3 { font-size: 1rem; font-weight: 600; }
+    .proj .yr { font-family: var(--mono); font-size: .76rem; color: var(--faint); white-space: nowrap; }
+    .proj p { font-size: .9rem; color: var(--muted); margin: 6px 0 10px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags span { font-family: var(--mono); font-size: .72rem; padding: 2px 8px; border-radius: 6px; background: var(--chip); color: var(--chip-ink); }
+    .proj.featured { grid-column: 1 / -1; }
+    .earlier-projects { margin-top: 16px; font-size: .92rem; color: var(--muted); }
+
+    /* Beyond */
+    .beyond { display: grid; gap: 22px; }
+    @media (min-width: 760px) { .beyond { grid-template-columns: 1.3fr 1fr; gap: 36px; } }
+    .awards { list-style: none; }
+    .awards li { display: grid; grid-template-columns: 34px 1fr auto; gap: 10px; align-items: start; padding: 10px 0; border-top: 1px solid var(--line); }
+    .awards li:first-child { border-top: 0; }
+    .awards .ic { width: 30px; height: 30px; border-radius: 8px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent-ink); font-size: .85rem; }
+    .awards .t { font-size: .94rem; }
+    .awards .s { font-size: .84rem; color: var(--muted); }
+    .awards .y { font-family: var(--mono); font-size: .76rem; color: var(--faint); padding-top: 3px; white-space: nowrap; }
+    .kv h3 { font-size: .8rem; font-family: var(--mono); text-transform: uppercase; letter-spacing: .05em; color: var(--faint); margin: 0 0 8px; font-weight: 500; }
+    .kv + .kv { margin-top: 18px; }
+    .kv p { font-size: .93rem; color: var(--muted); }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--line); padding: 36px 0 48px; }
+    .contact { display: grid; gap: 18px; }
+    @media (min-width: 700px) { .contact { grid-template-columns: 1.2fr 1fr; align-items: end; } }
+    .contact h2 { font-family: var(--serif); font-size: 1.4rem; margin-bottom: 6px; }
+    .contact p { color: var(--muted); font-size: .95rem; }
+    .contact ul { list-style: none; font-size: .92rem; }
+    .contact li { padding: 3px 0; display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+    .contact li i { width: 16px; color: var(--faint); }
+    .fine { margin-top: 26px; font-size: .8rem; color: var(--faint); }
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="images/sharif-logo.png" alt="Sharif Logo" class="logo-img" onerror="this.style.display='none'">
-                <span class="logo-text">Kasra Siavashpour</span>
-            </div>
-            <button class="menu-toggle" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#teaching">Teaching</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#awards">Awards</a></li>
-                <li><a href="#skills">Skills</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-photo-container">
-                <img src="images/profile.jpg" alt="Kasra Siavashpour" class="hero-photo" onerror="this.src='https://via.placeholder.com/180?text=KS'">
-            </div>
-            <h1>Kasra Siavashpour</h1>
-            <p class="subtitle">Computer Science Researcher</p>
-            <p>B.Sc. Student at Sharif University of Technology (2020–2025)<br>
-            Networking • Distributed Systems • IoT • Autonomous Systems</p>
-            <div class="social-links">
-                <a href="mailto:kasra.siavashpour@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/kasra-siavashpour" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/kasra-sia" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="cv.pdf" target="_blank" rel="noopener noreferrer" title="Download CV"><i class="fas fa-file-pdf"></i></a>
-            </div>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">Kasra Siavashpour</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#news">News</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#projects">Projects</a>
+      <a href="cv.pdf">CV</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Intro -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Researcher &middot; IPM, Tehran</div>
+        <h1>Kasra Siavashpour</h1>
+        <p class="lead">I work on systems that have to organize themselves: traffic shared by many independent agents, cooperative platforms with no central operator, and cellular networks that configure and heal on their own.</p>
+        <p class="body">I am a researcher at the <a href="https://www.ipm.ac.ir/">Institute for Research in Fundamental Sciences (IPM)</a>, working with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a>. I studied Computer Science at <a href="https://en.sharif.ir/">Sharif University of Technology</a>, where I also teach as a TA for Computer Networks and Operating Systems.</p>
+        <p class="body">I like work that sits between proofs and running code. On FAIR, simulation on real road networks contradicted parts of our first proofs, and fixing them made the paper better. I am currently applying to graduate programs.</p>
+        <div class="actions">
+          <a class="btn primary" href="cv.pdf"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> CV (PDF)</a>
+          <a class="btn" href="mailto:kasra.siavashpour@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i> Email</a>
+          <a class="btn" href="https://github.com/kasra-sia"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/kasra-siavashpour"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
         </div>
-    </section>
-
-    <!-- Main Content -->
-    <div class="container">
-        <!-- About Section -->
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-header">
-                    <img src="images/sharif-logo.png" alt="Sharif University of Technology" class="sharif-logo" onerror="this.style.display='none'">
-                    <div>
-                        <h3 style="color: var(--primary-color); font-size: 1.5rem; margin-bottom: 0.5rem;">Sharif University of Technology</h3>
-                        <p style="color: var(--text-secondary); font-weight: 600;">Bachelor of Science, Computer Science</p>
-                        <p style="color: var(--text-secondary);">2020–2025 | Tehran, Iran</p>
-                    </div>
-                </div>
-                <p class="about-text">
-                    I'm a final-year Computer Science student at <strong>Sharif University of Technology</strong>,
-                    one of Iran's most prestigious institutions. My research focuses on <strong>networking and distributed systems</strong>,
-                    with particular emphasis on <strong>IoT networks</strong>, <strong>autonomous aerial/vehicular systems (FANET/VANET)</strong>,
-                    and <strong>cluster-based routing optimization</strong> using SDN and machine learning techniques.
-                    I've had the privilege of collaborating with research groups at Sharif, <strong>Institute for Research in Fundamental Sciences (IPM)</strong>,
-                    and <strong>Politecnico di Milano</strong>, working on cutting-edge solutions for modern network infrastructures
-                    and decentralized cooperative systems.
-                </p>
-            </div>
-        </section>
-
-        <!-- Research Interests -->
-        <section id="research">
-            <h2 class="section-title">Research Interests</h2>
-            <div class="interests-grid">
-                <div class="interest-card">
-                    <i class="fas fa-network-wired"></i>
-                    <h3>Networking & Distributed Systems</h3>
-                    <p>Designing scalable, reliable network protocols and decentralized cooperative systems.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-wifi"></i>
-                    <h3>IoT Networking</h3>
-                    <p>Energy-efficient routing protocols and optimization for Internet of Things devices.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-drone"></i>
-                    <h3>FANET/VANET</h3>
-                    <p>Flying and vehicular ad-hoc networks for autonomous aerial and vehicular systems.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-project-diagram"></i>
-                    <h3>Cluster-Based Routing</h3>
-                    <p>SDN and ML-assisted optimization for efficient routing in dynamic environments.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-server"></i>
-                    <h3>Systems & Operating Systems</h3>
-                    <p>Low-level systems programming and performance optimization.</p>
-                </div>
-                <div class="interest-card">
-                    <i class="fas fa-code"></i>
-                    <h3>WebAssembly Performance</h3>
-                    <p>System acceleration and performance engineering with WASM for networked workloads.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Publications -->
-        <section id="publications">
-            <h2 class="section-title">Publications</h2>
-            <div class="publication">
-                <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
-                <div class="authors">
-                    <strong>Authors:</strong> Prof. Arash Vaezi†, Prof. Amir Daneshgar†, Kasra Siavashpour, Arshia Dadras
-                </div>
-                <div class="venue">Manuscript in preparation for submission to IEEE Symposium on Foundations of Computer Science (FOCS) 2025</div>
-                <div class="note">† Co-lead authors (equal contribution)</div>
-            </div>
-        </section>
-
-        <!-- Research Experience -->
-        <section id="experience">
-            <h2 class="section-title">Research Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <div class="timeline-title">Research Assistant</div>
-                                <div class="timeline-org">Institute for Research in Fundamental Sciences (IPM) & Sharif University of Technology</div>
-                            </div>
-                            <div class="timeline-date">Sep 2024 – Present</div>
-                        </div>
-                        <p class="timeline-supervisor"><strong>Supervisor:</strong> Dr. Arash Vaezi</p>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Implemented LoR (Loop of Rings) core in Go: rounds, checkpoints, verification teams, TCB updates
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Ran parameter sweeps over α, β, p to measure verification accuracy and communication cost
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Evaluated trader satisfaction and fractal-ring acceptance; reproduced key thresholds and trends
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Built reproducible Go CLI with structured logs and plots for experiment reporting
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <div class="timeline-title">Research Assistant</div>
-                                <div class="timeline-org">Sharif University of Technology</div>
-                            </div>
-                            <div class="timeline-date">Sep 2024 – Present</div>
-                        </div>
-                        <p class="timeline-supervisor"><strong>Supervisor:</strong> Dr. Hossein Peyvandi</p>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Conducted comprehensive survey of 100+ papers on Self-Organizing Networks
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Built detailed comparison table aligning methods, results, and identifying research gaps
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Wrote weekly progress reports and coordinated team meetings with action items
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <div class="timeline-title">Research Assistant</div>
-                                <div class="timeline-org">Sharif University of Technology</div>
-                            </div>
-                            <div class="timeline-date">Oct 2023 – Jan 2024</div>
-                        </div>
-                        <p class="timeline-supervisor"><strong>Supervisor:</strong> Dr. Bardia Safaei</p>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Researched nature-inspired FANET and IoT cluster routing with mobility-aware benchmarking
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Prototyped beaconing and neighbor discovery, analyzed energy–delivery trade-offs
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Built reproducible pipelines with configs, seeds, and scripts for experiment reruns
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div>
-                                <div class="timeline-title">Research Assistant</div>
-                                <div class="timeline-org">Politecnico di Milano</div>
-                            </div>
-                            <div class="timeline-date">Jul 2023 – Sep 2023</div>
-                        </div>
-                        <p class="timeline-supervisor"><strong>Supervisor:</strong> Dr. Gianni Antichi</p>
-                        <ul style="list-style: none; padding-left: 0;">
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Researched WebAssembly for systems acceleration and performance engineering
-                            </li>
-                            <li style="padding-left: 1.5rem; position: relative; margin-bottom: 0.5rem; color: var(--text-secondary);">
-                                <span style="position: absolute; left: 0; color: var(--primary-color); font-weight: bold;">▹</span>
-                                Designed comprehensive benchmarking plan for CPU, memory, latency, and throughput
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Teaching Experience -->
-        <section id="teaching">
-            <h2 class="section-title">Teaching Experience</h2>
-            <div class="teaching-grid">
-                <div class="teaching-card">
-                    <h3>Computer Networks</h3>
-                    <p class="instructor">Dr. Hossein Peyvandi</p>
-                    <p class="semester">Winter 2024</p>
-                    <ul>
-                        <li>Held helper classes and office hours</li>
-                        <li>Designed and graded weekly assignments</li>
-                    </ul>
-                </div>
-
-                <div class="teaching-card">
-                    <h3>Operating Systems</h3>
-                    <p class="instructor">Dr. Arash Vaezi</p>
-                    <p class="semester">Winter 2024</p>
-                    <ul>
-                        <li>Designed and graded weekly assignments</li>
-                        <li>Wrote rubrics and sample answers</li>
-                        <li>Piazza course support</li>
-                    </ul>
-                </div>
-
-                <div class="teaching-card">
-                    <h3>Operating Systems</h3>
-                    <p class="instructor">Dr. Hossein Asadi & Dr. Rasul Jalili</p>
-                    <p class="semester">Fall 2024</p>
-                    <ul>
-                        <li>Guided 120+ students through assignments</li>
-                        <li>Wrote comprehensive rubrics and sample answers</li>
-                    </ul>
-                </div>
-
-                <div class="teaching-card">
-                    <h3>Computer Networks</h3>
-                    <p class="instructor">Dr. Kambiz Mizanian</p>
-                    <p class="semester">Fall 2023</p>
-                    <ul>
-                        <li>Designed homework and project checklists</li>
-                        <li>Built autograders and dashboards</li>
-                    </ul>
-                </div>
-
-                <div class="teaching-card">
-                    <h3>Operating Systems</h3>
-                    <p class="instructor">Dr. Mohaddeseh Mirbeygi & Dr. MohammadAli Mirzaei</p>
-                    <p class="semester">Fall 2023</p>
-                    <ul>
-                        <li>Guided projects (threads, scheduling, IPC)</li>
-                        <li>Designed and graded assignments for 120+ students</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects">
-            <h2 class="section-title">Notable Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Go-Based Online Code Judge Platform</h3>
-                        <div class="date">Winter 2024</div>
-                        <div class="tech-stack">Go • Docker • Web Development</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Full-stack online judge with auth, roles, problems, and submissions</li>
-                            <li>Docker-based code runner with resource limits and isolation</li>
-                            <li>Clean modular architecture for maintainable development</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/online-judge" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>BitTorrent-style P2P Network</h3>
-                        <div class="date">Spring 2023</div>
-                        <div class="tech-stack">Python • Networking • P2P</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Peer discovery and direct connections beyond tracker</li>
-                            <li>Tested piece exchange and failure handling</li>
-                            <li>CLI client with documented protocol flows</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/BitTorrent-network" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Innovative Sort</h3>
-                        <div class="date">Spring 2021</div>
-                        <div class="tech-stack">Java • Algorithms • Benchmarking</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Custom sort algorithm outperforming Java's Arrays.sort</li>
-                            <li>Comprehensive benchmarking on large synthetic arrays</li>
-                            <li>Complexity analysis and empirical validation</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/MySuperSort" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Golabi Social Media</h3>
-                        <div class="date">Winter 2020 – Summer 2020</div>
-                        <div class="tech-stack">Java • MVC • GUI</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Core features: posts, messaging, media, follow graph</li>
-                            <li>MVC architecture with code-style checks</li>
-                            <li>Local persistence and user documentation</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/Golabi_social_media-network" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Battleship Network Game</h3>
-                        <div class="date">Spring – Winter 2020</div>
-                        <div class="tech-stack">Java • Networking • GUI</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Networked multiplayer gameplay</li>
-                            <li>Enhanced features with clean-code practices</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/Battleship-network-game" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Snake & Ladder Master</h3>
-                        <div class="date">Spring – Winter 2020</div>
-                        <div class="tech-stack">Java • GUI • Game Development</div>
-                    </div>
-                    <div class="project-body">
-                        <ul>
-                            <li>Enhanced classic board game</li>
-                            <li>Interactive GUI with game state management</li>
-                        </ul>
-                        <a href="https://github.com/kasra-sia/snake-and-ladder" class="project-link" target="_blank" rel="noopener noreferrer">
-                            View on GitHub <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Honors & Awards -->
-        <section id="awards">
-            <h2 class="section-title">Honors & Awards</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">🏆</div>
-                    <div class="award-content">
-                        <h3>Top 0.1% Iranian University Entrance Exam</h3>
-                        <p class="year">2020</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.3rem;">Among 155,250 candidates</p>
-                    </div>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">🥇</div>
-                    <div class="award-content">
-                        <h3>National Hovercraft Competition - 1st Place</h3>
-                        <p class="year">2016–2017</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.3rem;">Two consecutive years, design & control</p>
-                    </div>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">♟️</div>
-                    <div class="award-content">
-                        <h3>Provincial Chess Competition - 1st Place</h3>
-                        <p class="year">2016</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.3rem;">High School Level</p>
-                    </div>
-                </div>
-
-                <div class="award-card">
-                    <div class="award-icon">🏓</div>
-                    <div class="award-content">
-                        <h3>Provincial Table Tennis - 1st Place</h3>
-                        <p class="year">2015</p>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.3rem;">High School Level</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills -->
-        <section id="skills">
-            <h2 class="section-title">Skills & Technologies</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">C/C++</span>
-                        <span class="skill-tag">Go</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">Bash</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Frameworks & Libraries</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">scikit-learn</span>
-                        <span class="skill-tag">Matplotlib</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">LaTeX</span>
-                        <span class="skill-tag">NS-3</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-desktop"></i> Operating Systems</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Ubuntu</span>
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">macOS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-globe"></i> Web Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Vue.js</span>
-                        <span class="skill-tag">Flask</span>
-                        <span class="skill-tag">HTML5</span>
-                        <span class="skill-tag">CSS3</span>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <h3><i class="fas fa-language"></i> Languages</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Persian (Native)</span>
-                        <span class="skill-tag">English (C1)</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <ul class="interests" aria-label="Research interests">
+          <li>Distributed &amp; Decentralized Systems</li>
+          <li>IoT &amp; Cyber-Physical Systems</li>
+          <li>Multi-Agent Systems</li>
+          <li>AI-Driven Network Automation</li>
+        </ul>
+      </div>
+      <div class="portrait">
+        <!-- A ring of peers: a nod to the Loop of the Rings -->
+        <svg class="ring" viewBox="0 0 240 240" aria-hidden="true">
+          <g class="orbit" fill="none" stroke="currentColor">
+            <circle cx="120" cy="120" r="112" stroke-opacity=".25" stroke-dasharray="2 6"/>
+            <path d="M120 8 L199 41 M232 120 L199 199 M120 232 L41 199 M8 120 L41 41" stroke-opacity=".35"/>
+            <g fill="currentColor" stroke="none">
+              <circle cx="120" cy="8" r="4"/>
+              <circle cx="199" cy="41" r="3"/>
+              <circle cx="232" cy="120" r="4"/>
+              <circle cx="199" cy="199" r="3"/>
+              <circle cx="120" cy="232" r="4"/>
+              <circle cx="41" cy="199" r="3"/>
+              <circle cx="8" cy="120" r="4"/>
+              <circle cx="41" cy="41" r="3"/>
+            </g>
+          </g>
+        </svg>
+        <img src="images/profile.jpg" alt="Kasra Siavashpour" width="180" height="180">
+      </div>
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Kasra Siavashpour. All rights reserved.</p>
-        <p style="margin-top: 0.5rem;">
-            <strong>Email:</strong> <a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a>
-        </p>
-        <p style="margin-top: 0.3rem;">
-            <strong>Phone:</strong> <a href="tel:+989120763679">+98 912 076 3679</a> |
-            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kasra-siavashpour" target="_blank" rel="noopener noreferrer">kasra-siavashpour</a> |
-            <strong>GitHub:</strong> <a href="https://github.com/kasra-sia" target="_blank" rel="noopener noreferrer">kasra-sia</a>
-        </p>
-    </footer>
+  <!-- News -->
+  <section class="block" id="news">
+    <div class="wrap">
+      <div class="section-head"><h2>News</h2></div>
+      <ul class="news">
+        <li><time datetime="2026-09">Sep 2026</time><span><strong>FAIR</strong>, our envy-free routing model for multi-agent traffic, is submitted to <strong>AAMAS 2027</strong>.</span></li>
+        <li><time datetime="2026-09">Sep 2026</time><span>Teaching again this fall: Computer Networks with Dr.&nbsp;Mahdi Dolati and Operating Systems with Dr.&nbsp;Hossein Asadi.</span></li>
+        <li><time datetime="2026-05">May 2026</time><span>Started working on FAIR at IPM with Dr.&nbsp;Arash Vaezi.</span></li>
+        <li><time>Now</time><span>Finishing our survey of self-organizing cellular networks with collaborators at Sharif, Khatam University and the University of Glasgow, for the IEEE Open Journal of the Communications Society.</span></li>
+      </ul>
+    </div>
+  </section>
 
-    <script>
-        // Mobile menu toggle
-        function toggleMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
+  <!-- Research -->
+  <section class="block" id="research">
+    <div class="wrap">
+      <div class="section-head"><h2>Research</h2><span class="kicker">what I am working on</span></div>
+      <div class="threads">
+        <article class="thread">
+          <div class="num">01 &middot; Multi-agent systems</div>
+          <h3>Fair routing when everyone shares the road</h3>
+          <div class="project">FAIR &middot; IPM &amp; Sharif</div>
+          <p>When every vehicle picks its own route, some trips pay for everyone else's speed. FAIR routes agents so that no one envies another's share of the delay, and the guarantee holds at every step of a trip. I designed and built the evaluation: a simulator run on seven city road networks.</p>
+          <p class="figure">Envy spread cut by <strong>9.1&ndash;22.9&times;</strong> against shortest-path routing, with lower travel time in every network.</p>
+          <div class="links"><a href="#pub-fair">Paper (under review) &rarr;</a></div>
+        </article>
+        <article class="thread">
+          <div class="num">02 &middot; Decentralized systems</div>
+          <h3>Cooperation without a coordinator</h3>
+          <div class="project">Loop of the Rings &middot; IPM &amp; Sharif</div>
+          <p>The Loop of the Rings is a fully decentralized cooperative system built from randomized rings of participants. It can serve as a shared workspace or a platform for services, from freelancing to IoT management. I work on modeling its randomized behavior and on the large-scale simulations that test the theory against adversarial participants.</p>
+          <p class="figure">With at least <strong>60%</strong> honest participants, everyone who acts correctly gets their service or payment.</p>
+          <div class="links"><a href="#pub-lor">Manuscript &rarr;</a><a href="https://arxiv.org/abs/2206.01121">Preliminary version on arXiv</a></div>
+        </article>
+        <article class="thread">
+          <div class="num">03 &middot; Network automation</div>
+          <h3>Cellular networks that manage themselves</h3>
+          <div class="project">SON survey &middot; Sharif, Khatam &amp; Glasgow</div>
+          <p>Dense 5G and 6G networks are too complex to tune by hand. We surveyed self-organizing networks across all five functions, from self-configuration to self-learning, mapped each one to its control parameters, objectives and algorithms, and laid out the open problems for 6G.</p>
+          <p class="figure"><strong>114</strong> papers reviewed and compared.</p>
+          <div class="links"><a href="#pub-son">Survey &rarr;</a></div>
+        </article>
+      </div>
+      <p class="earlier">Earlier, I worked on nature-inspired cluster routing for flying ad-hoc and IoT networks with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a>, and on WebAssembly for systems acceleration with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Dr.&nbsp;Gianni Antichi</a> at Politecnico di Milano.</p>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section class="block" id="publications">
+    <div class="wrap">
+      <div class="section-head"><h2>Publications</h2></div>
+
+      <div class="pub-group">Under review</div>
+      <article class="pub" id="pub-fair">
+        <div class="title">FAIR: A Novel Envy-Free Multi-Agent Model for Traffic Systems</div>
+        <div class="authors">Arash Vaezi, Sepideh Niknejad, <strong>Kasra Siavashpour</strong>, Arshia Dadras</div>
+        <div class="meta"><span class="status review">Under review</span><span class="venue">International Conference on Autonomous Agents and Multiagent Systems (AAMAS) 2027</span></div>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <div class="text">
+            <p>We introduce <em>FAIR</em> (Fairness-Aware Incremental Routing), a dynamic multi-agent traffic system that enforces <em>fairness</em> in routing decisions while continuously adapting to real-time congestion. Agents move through a shared directed road network and repeatedly recompute shortest paths at intersections using density-aware edge weights derived from a non-linear car-following model. The system evolves through a sequence of discrete decision states, each encoding agent positions, local densities, and traversal costs, enabling agents to make informed, myopic routing decisions in a fully dynamic environment.</p>
+            <p>The initial fairness notion is <em>optimal envy-freeness</em>: the ratio of any two agents' expected remaining travel costs at departure must match the ratio of their realized costs upon arrival. Unlike classical equilibrium-based notions, the paper establishes a <em>trajectory-level fairness guarantee</em>: under mild structural assumptions, <em>FAIR</em> preserves optimal envy-freeness at every decision step along each agent's trajectory, independent of future arrivals, congestion evolution, or convergence to equilibrium. It also introduces <em>proportional envy-freeness</em>, a relaxed criterion allowing bounded deviations while ensuring comparable agents experience travel costs within a constant factor of each other.</p>
+            <p>Beyond fairness, we show that <em>FAIR</em> induces strong structural properties throughout system evolution. Specifically its: (1) routing decisions select edges that incur the smallest incremental delay rather than the currently fastest path (<strong>congestion-efficiency</strong>); (2) local congestion is balanced at every intersection, preventing any outgoing edge from becoming disproportionately loaded; and (3) the global traffic state evolves gradually and predictably, avoiding oscillations, sudden congestion spikes, or cascading effects (<strong>smoothness</strong>).</p>
+            <p>These properties also persist, up to constant factors, under proportional envy-freeness, demonstrating robustness to imperfect fairness.</p>
+            <p>Experiments on seven metropolitan road networks show that <em>FAIR</em> reduces the observed envy spread by factors of 9.1&ndash;22.9 relative to a dynamically recomputed free-flow shortest-path baseline, while also reducing travel time and delay and increasing throughput in all evaluated networks.</p>
+          </div>
+        </details>
+      </article>
+
+      <div class="pub-group">In preparation</div>
+      <article class="pub" id="pub-son">
+        <div class="title">A Comprehensive Survey of Self-Organizing Networks in Next-Generation Cellular Systems</div>
+        <div class="authors">Ardalan Siavashpour, <strong>Kasra Siavashpour</strong>, Masoumeh Azadegan, Bardia Safaei, Hossein Peyvandi, Muhammad Imran</div>
+        <div class="meta"><span class="status prep">In preparation</span><span class="venue">for the IEEE Open Journal of the Communications Society (OJ-COMS)</span></div>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <div class="text">
+            <p>The increasing complexity of modern cellular networks, driven by ultra-dense deployments, heterogeneous architectures, and diverse service requirements, has rendered traditional manual network management approaches impractical. Self-Organizing Networks (SON) have emerged as a key enabler of autonomous operation by introducing self-configuration, self-optimization, and self-healing capabilities into radio access and backhaul infrastructures. Existing SON surveys, however, remain partial and 5G-centric. Broad treatments date from the early 5G period, while recent reviews examine a single function in isolation. Self-protection and self-learning are treated as prospective extensions rather than integral capabilities, and no survey analyzes the full SON function set in the context of 6G architectures. Motivated by these gaps, this paper presents a comprehensive survey of SON research, systematically reviewing architectural principles, closed-loop control mechanisms, performance objectives, control parameters, and algorithmic techniques across core SON functions. Beyond standardized 3GPP functionalities, emerging paradigms such as self-learning and self-protection are analyzed to capture the evolution of SON toward intelligent and predictive network management. The survey synthesizes optimization-based, heuristic, and learning-driven approaches, highlighting their trade-offs in scalability, adaptability, and operational robustness. Quantitative trends derived from 114 references illustrate the shifting research focus toward self-optimization and resilience in the 5G and beyond era. Finally, open challenges and future research directions are discussed, including conflict coordination among SON functions, explainable and federated learning, integration with non-terrestrial networks, and the role of SON in 6G-enabled architectures.</p>
+          </div>
+        </details>
+      </article>
+      <article class="pub" id="pub-lor">
+        <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
+        <div class="authors">Arash Vaezi, Amir Daneshgar, Arshia Dadras, <strong>Kasra Siavashpour</strong></div>
+        <div class="meta"><span class="status prep">In preparation</span><span class="venue">for the IEEE Symposium on Foundations of Computer Science (FOCS) 2027</span><a href="https://arxiv.org/abs/2206.01121">Preliminary version on arXiv</a></div>
+        <details class="abstract">
+          <summary>Abstract</summary>
+          <div class="text">
+            <p>We introduce <em>LoR</em>, a reliable, scalable, fully decentralized, and distributed cooperative system, where <em>LoR</em> stands for &ldquo;Loop of the Rings&rdquo;. Distinct from conventional transaction-oriented systems, <em>LoR</em> handles cooperation using its ring-based randomized structure, making it suitable as both a cooperative workspace and a versatile platform for service provisioning, accommodating various roles such as freelancers, IoT management systems, and even 5G-related services. In <em>LoR</em> users access a reliable environment, enabling them to either share in or offer a predetermined set of services initially determined by an admin. <em>LoR</em> may also be implemented as a middleware that operates independent of the underlying infrastructure. Assuming a proportion of at least 60 percent of honest participants in an instance of <em>LoR</em>, the system provides reliability, scalability and satisfaction i.e. users may make occasional mistakes or face temporary issues such as network delays, yet those who act correctly will ultimately be satisfied by receiving their services or payments.</p>
+            <p>In addition to introducing <em>LoR</em>'s structure along with its operating rules in detail as our main contribution, we also provide mathematical analysis for the worst-case scenarios as well as a typical minimal real-case simulation supporting our theoretical results on <em>LoR</em>'s reliability, scalability and user satisfaction.</p>
+          </div>
+        </details>
+      </article>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section class="block" id="experience">
+    <div class="wrap">
+      <div class="section-head"><h2>Experience</h2><a class="more" href="cv.pdf">Full details in the CV &rarr;</a></div>
+      <ul class="timeline">
+        <li class="current">
+          <div class="when">May 2026 &ndash; Present</div>
+          <h3>Researcher <span class="org">&middot; Institute for Research in Fundamental Sciences (IPM)</span></h3>
+          <p>FAIR: fairness guarantees and large-scale evaluation for multi-agent traffic routing.</p>
+          <div class="people">with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a></div>
+        </li>
+        <li class="current">
+          <div class="when">Aug 2024 &ndash; Present</div>
+          <h3>Research Assistant <span class="org">&middot; IPM &amp; Sharif University of Technology</span></h3>
+          <p>The Loop of the Rings: modeling and simulation of a decentralized cooperative system.</p>
+          <div class="people">with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a> and <a href="https://scholar.google.com/citations?user=P2u-2f0AAAAJ&amp;hl=en">Dr.&nbsp;Amir Daneshgar</a></div>
+        </li>
+        <li class="current">
+          <div class="when">Aug 2024 &ndash; Present</div>
+          <h3>Research Assistant <span class="org">&middot; Sharif University of Technology</span></h3>
+          <p>Survey of self-organizing networks for 5G and 6G cellular systems.</p>
+          <div class="people">with <a href="https://loop.frontiersin.org/people/545066/overview">Dr.&nbsp;Hossein Peyvandi</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=dr3xMzgAAAAJ">Dr.&nbsp;Masoumeh Azadegan</a> (Khatam University); collaborating with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a> and <a href="https://scholar.google.com/citations?user=HBQjTKIAAAAJ&amp;hl=en">Dr.&nbsp;Muhammad Imran</a> (University of Glasgow)</div>
+        </li>
+        <li>
+          <div class="when">May 2024 &ndash; Aug 2024</div>
+          <h3>Research Assistant <span class="org">&middot; Politecnico di Milano (remote)</span></h3>
+          <p>WebAssembly for systems acceleration; a benchmarking plan for CPU, memory, latency and throughput.</p>
+          <div class="people">with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Dr.&nbsp;Gianni Antichi</a></div>
+        </li>
+        <li>
+          <div class="when">Oct 2023 &ndash; Jan 2024</div>
+          <h3>Research Assistant <span class="org">&middot; Sharif University of Technology</span></h3>
+          <p>Nature-inspired cluster routing for FANET and IoT networks; prototyped beaconing and neighbor discovery and analyzed energy&ndash;delivery trade-offs.</p>
+          <div class="people">with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a></div>
+        </li>
+      </ul>
+      <div class="edu">
+        <img src="images/sharif-logo.png" alt="" width="40" height="40">
+        <div>
+          <div class="t">B.Sc. in Computer Science, Sharif University of Technology</div>
+          <div class="s">2020 &ndash; 2026 &middot; Coursework highlights: Machine Learning Systems Design, Data and Network Security, Stochastic Processes</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section class="block" id="teaching">
+    <div class="wrap">
+      <div class="section-head"><h2>Teaching</h2><span class="kicker">Sharif University of Technology</span></div>
+      <div class="stats">
+        <div class="stat"><div class="n">8</div><div class="l">course offerings as a teaching assistant</div></div>
+        <div class="stat"><div class="n">2</div><div class="l">core systems courses</div></div>
+        <div class="stat"><div class="n">120+</div><div class="l">students in the largest classes</div></div>
+      </div>
+      <div class="courses">
+        <div class="course">
+          <h3>Computer Networks</h3>
+          <ul>
+            <li><span>Dr.&nbsp;Mahdi Dolati</span><span>Fall 2026</span></li>
+            <li><span>Dr.&nbsp;Mahdi Dolati</span><span>Winter 2026</span></li>
+            <li><span>Dr.&nbsp;Hossein Peyvandi</span><span>Winter 2024</span></li>
+            <li><span>Dr.&nbsp;Kambiz Mizanian</span><span>Fall 2023</span></li>
+          </ul>
+        </div>
+        <div class="course">
+          <h3>Operating Systems</h3>
+          <ul>
+            <li><span>Dr.&nbsp;Hossein Asadi</span><span>Fall 2026</span></li>
+            <li><span>Dr.&nbsp;Hossein Asadi &amp; Dr.&nbsp;Rasul Jalili</span><span>Fall 2024</span></li>
+            <li><span>Dr.&nbsp;Arash Vaezi &middot; <a href="https://piazza.com/sharif/winter2024/22861/info">Piazza</a></span><span>Winter 2024</span></li>
+            <li><span>Dr.&nbsp;Mohaddeseh Mirbeygi &amp; Dr.&nbsp;MohammadAli Mirzaei</span><span>Fall 2023</span></li>
+          </ul>
+        </div>
+      </div>
+      <p class="teach-note">I design and grade weekly assignments, write rubrics, hold office hours, guide course projects and build autograders.</p>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="block" id="projects">
+    <div class="wrap">
+      <div class="section-head"><h2>Projects</h2><span class="kicker">things I built</span><a class="more" href="https://github.com/kasra-sia">All on GitHub &rarr;</a></div>
+      <div class="projects">
+        <a class="proj featured" href="https://github.com/sharif-go-lab/SliceDB">
+          <div class="top"><h3>SliceDB: a distributed key-value store</h3><span class="yr">2025&ndash;2026</span></div>
+          <p>A sharded store with write-ahead-log replication and leader election through etcd. It fails over automatically and reshards online: killing a node under load caused zero failed requests.</p>
+          <div class="tags"><span>Go</span><span>etcd</span><span>replication</span><span>failover</span></div>
+        </a>
+        <a class="proj" href="https://github.com/kasra-sia/vector-search-product-rag">
+          <div class="top"><h3>Multimodal product search</h3><span class="yr">2025&ndash;2026</span></div>
+          <p>Text and image search over 1M products, evaluated on 5,000 real user queries.</p>
+          <div class="tags"><span>Python</span><span>CLIP</span><span>FAISS</span></div>
+        </a>
+        <a class="proj" href="https://github.com/sharif-go-lab/nyc-taxi-hdfs-spark-ha">
+          <div class="top"><h3>Highly available HDFS + Spark</h3><span class="yr">2025</span></div>
+          <p>HDFS with automatic NameNode failover, running Spark queries on NYC taxi data. Team of two.</p>
+          <div class="tags"><span>Hadoop</span><span>ZooKeeper</span><span>Spark</span></div>
+        </a>
+        <a class="proj" href="https://github.com/sharif-go-lab/go-judge-platform">
+          <div class="top"><h3>Go Judge: an online judge</h3><span class="yr">2025</span></div>
+          <p>Runs each submission in a Docker sandbox; I built the web server, UI and database schema. Team of two.</p>
+          <div class="tags"><span>Go</span><span>PostgreSQL</span><span>Docker</span></div>
+        </a>
+        <a class="proj" href="https://github.com/sharif-go-lab/go-download-manager">
+          <div class="top"><h3>Go download manager</h3><span class="yr">2025</span></div>
+          <p>A terminal downloader with parallel range requests, pause/resume and per-queue speed limits. Team of two.</p>
+          <div class="tags"><span>Go</span><span>HTTP</span><span>CLI</span></div>
+        </a>
+      </div>
+      <p class="earlier-projects">Older work: a <a href="https://github.com/kasra-sia/BitTorent-network">BitTorrent-style peer-to-peer network</a>, <a href="https://github.com/kasra-sia/MySuperSort">a custom sort benchmarked against Java's Arrays.sort</a>, and <a href="https://github.com/kasra-sia/Golabi_social_media-network">Golabi, a social network app</a>.</p>
+    </div>
+  </section>
+
+  <!-- Beyond -->
+  <section class="block" id="beyond">
+    <div class="wrap">
+      <div class="section-head"><h2>Beyond the lab</h2></div>
+      <div class="beyond">
+        <ul class="awards">
+          <li><span class="ic"><i class="fa-solid fa-ranking-star" aria-hidden="true"></i></span><span><span class="t">Top 0.1% in the Iranian University Entrance Exam</span><br><span class="s">among 155,250 candidates</span></span><span class="y">2020</span></li>
+          <li><span class="ic"><i class="fa-solid fa-wind" aria-hidden="true"></i></span><span><span class="t">1st place, National Hovercraft Competition</span><br><span class="s">two years in a row, design &amp; control</span></span><span class="y">2016&ndash;17</span></li>
+          <li><span class="ic"><i class="fa-solid fa-chess-knight" aria-hidden="true"></i></span><span><span class="t">1st place, Provincial Chess Competition</span><br><span class="s">high school</span></span><span class="y">2016</span></li>
+          <li><span class="ic"><i class="fa-solid fa-table-tennis-paddle-ball" aria-hidden="true"></i></span><span><span class="t">1st place, Provincial Table Tennis Competition</span><br><span class="s">high school</span></span><span class="y">2015</span></li>
+        </ul>
+        <div>
+          <div class="kv">
+            <h3>Toolbox</h3>
+            <p>Go, Python, C/C++, Java, JavaScript, Bash &middot; PyTorch, TensorFlow, scikit-learn &middot; Docker, Git, PostgreSQL, Spark, NS-3, LaTeX &middot; Vue, Flask</p>
+          </div>
+          <div class="kv">
+            <h3>Languages</h3>
+            <p>Persian (native) &middot; English (C1)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="contact">
+      <div>
+        <h2>Get in touch</h2>
+        <p>I am happy to talk about research, collaborations or graduate positions.</p>
+      </div>
+      <ul>
+        <li><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a></li>
+        <li><i class="fa-solid fa-building-columns" aria-hidden="true"></i><a href="mailto:kasra.siavashpour@sharif.edu">kasra.siavashpour@sharif.edu</a></li>
+        <li><i class="fa-solid fa-phone" aria-hidden="true"></i><a href="tel:+989120763679">+98 912 076 3679</a></li>
+        <li><i class="fa-brands fa-github" aria-hidden="true"></i><a href="https://github.com/kasra-sia">github.com/kasra-sia</a></li>
+        <li><i class="fa-brands fa-linkedin" aria-hidden="true"></i><a href="https://www.linkedin.com/in/kasra-siavashpour">linkedin.com/in/kasra-siavashpour</a></li>
+      </ul>
+    </div>
+    <p class="fine">&copy; 2026 Kasra Siavashpour &middot; Last updated October 2026</p>
+  </div>
+</footer>
+
+<script>
+  // Theme toggle: follows the system until the visitor picks one.
+  (function () {
+    var root = document.documentElement;
+    try {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    } catch (e) {}
+    document.getElementById('themeToggle').addEventListener('click', function () {
+      var current = root.getAttribute('data-theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      var next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+
+  // Highlight the section in view.
+  (function () {
+    if (!('IntersectionObserver' in window)) return;
+    var links = {};
+    document.querySelectorAll('.nav a[href^="#"]').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        var a = links[e.target.id];
+        if (a && e.isIntersecting) {
+          Object.values(links).forEach(function (l) { l.classList.remove('active'); });
+          a.classList.add('active');
         }
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    // Close mobile menu if open
-                    document.getElementById('navLinks').classList.remove('active');
-                }
-            });
-        });
-
-        // Scroll animation observer
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        // SEO-friendly tweak: only animate sections inside .container (don't hide the hero initially)
-        document.querySelectorAll('.container section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            observer.observe(section);
-        });
-
-        // Add active state to navigation on scroll
-        window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const scrollY = window.pageYOffset;
-
-            sections.forEach(section => {
-                const sectionHeight = section.offsetHeight;
-                const sectionTop = section.offsetTop - 100;
-                const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
-
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    navLink?.classList.add('active');
-                } else {
-                    navLink?.classList.remove('active');
-                }
-            });
-        });
-    </script>
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    Object.keys(links).forEach(function (id) { var s = document.getElementById(id); if (s) io.observe(s); });
+  })();
+</script>
 </body>
 </html>
