@@ -262,17 +262,6 @@
     .status.review { background: var(--ok-soft); color: var(--ok); }
     .status.prep { background: var(--plan-soft); color: var(--plan); }
     .venue { color: var(--muted); }
-    details.abstract summary {
-      cursor: pointer; font-size: .88rem; color: var(--accent-ink); list-style: none; display: inline-flex; align-items: center; gap: 6px;
-    }
-    details.abstract summary::-webkit-details-marker { display: none; }
-    details.abstract summary::before { content: "+"; font-family: var(--mono); }
-    details.abstract[open] summary::before { content: "\2212"; }
-    details.abstract .text {
-      margin-top: 10px; padding: 14px 16px; background: var(--surface-2); border-radius: 10px;
-      font-size: .92rem; color: var(--muted); line-height: 1.7;
-    }
-    details.abstract .text p + p { margin-top: 10px; }
 
     /* Experience timeline */
     .timeline { list-style: none; position: relative; }
@@ -444,7 +433,6 @@
           <div class="project">FAIR &middot; IPM &amp; Sharif</div>
           <p>When every vehicle picks its own route, some trips pay for everyone else's speed. FAIR routes agents so that no one envies another's share of the delay, and the guarantee holds at every step of a trip. I designed and built the evaluation; when it contradicted two of our lemmas on real networks, we revised them.</p>
           <p class="figure">Evaluated on <strong>7</strong> city road networks with up to <strong>132K</strong> trips each.</p>
-          <div class="links"><a href="#pub-fair">Paper &rarr;</a></div>
         </article>
         <article class="thread">
           <div class="num">02 &middot; Decentralized systems</div>
@@ -452,7 +440,7 @@
           <div class="project">Loop of the Rings &middot; IPM &amp; Sharif</div>
           <p>The Loop of the Rings is a fully decentralized cooperative system built from randomized rings of participants. It can serve as a shared workspace or a platform for services, from freelancing to IoT management. I contribute to its worst-case analysis, implemented the protocol core in Go, and run the parameter sweeps and adversarial simulations that test the theory.</p>
           <p class="figure">With at least <strong>60%</strong> honest participants, everyone who acts correctly gets their service or payment.</p>
-          <div class="links"><a href="#pub-lor">Manuscript &rarr;</a><a href="https://arxiv.org/abs/2206.01121">Preliminary version on arXiv</a></div>
+          <div class="links"><a href="https://arxiv.org/abs/2206.01121">Preliminary version on arXiv</a></div>
         </article>
         <article class="thread">
           <div class="num">03 &middot; Network automation</div>
@@ -460,7 +448,6 @@
           <div class="project">SON survey &middot; Sharif, Khatam &amp; Glasgow</div>
           <p>Dense 5G and 6G networks are too complex to tune by hand. We surveyed self-organizing networks across all five functions, from self-configuration to self-learning, mapped each one to its control parameters, objectives and algorithms, and laid out the open problems for 6G.</p>
           <p class="figure"><strong>114</strong> papers reviewed and compared.</p>
-          <div class="links"><a href="#pub-son">Survey &rarr;</a></div>
         </article>
       </div>
       <p class="earlier">Earlier, I worked on nature-inspired cluster routing for flying ad-hoc and IoT networks with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a>, and on WebAssembly for systems acceleration with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Dr.&nbsp;Gianni Antichi</a> at Politecnico di Milano.</p>
@@ -477,40 +464,17 @@
         <div class="title">FAIR: A Novel Envy-Free Multi-Agent Model for Traffic Systems</div>
         <div class="authors">Arash Vaezi, Sepideh Niknejad, <strong>Kasra Siavashpour</strong>, Arshia Dadras</div>
         <div class="meta"><span class="status prep">In preparation</span><span class="venue">for the International Conference on Autonomous Agents and Multiagent Systems (AAMAS) 2027 &middot; abstract submitted</span></div>
-        <details class="abstract">
-          <summary>Abstract</summary>
-          <div class="text">
-            <p>We introduce <em>FAIR</em> (Fairness-Aware Incremental Routing), a dynamic multi-agent traffic system that enforces <em>fairness</em> in routing decisions while continuously adapting to real-time congestion. Agents move through a shared directed road network and repeatedly recompute shortest paths at intersections using density-aware edge weights derived from a non-linear car-following model. The system evolves through a sequence of discrete decision states, each encoding agent positions, local densities, and traversal costs, enabling agents to make informed, myopic routing decisions in a fully dynamic environment.</p>
-            <p>The initial fairness notion is <em>optimal envy-freeness</em>: the ratio of any two agents' expected remaining travel costs at departure must match the ratio of their realized costs upon arrival. Unlike classical equilibrium-based notions, the paper establishes a <em>trajectory-level fairness guarantee</em>: under mild structural assumptions, <em>FAIR</em> preserves optimal envy-freeness at every decision step along each agent's trajectory, independent of future arrivals, congestion evolution, or convergence to equilibrium. It also introduces <em>proportional envy-freeness</em>, a relaxed criterion allowing bounded deviations while ensuring comparable agents experience travel costs within a constant factor of each other.</p>
-            <p>Beyond fairness, we show that <em>FAIR</em> induces strong structural properties throughout system evolution. Specifically its: (1) routing decisions select edges that incur the smallest incremental delay rather than the currently fastest path (<strong>congestion-efficiency</strong>); (2) local congestion is balanced at every intersection, preventing any outgoing edge from becoming disproportionately loaded; and (3) the global traffic state evolves gradually and predictably, avoiding oscillations, sudden congestion spikes, or cascading effects (<strong>smoothness</strong>).</p>
-            <p>These properties also persist, up to constant factors, under proportional envy-freeness, demonstrating robustness to imperfect fairness.</p>
-            <p>Experiments on seven metropolitan road networks show that <em>FAIR</em> reduces the observed envy spread by factors of 9.1&ndash;22.9 relative to a dynamically recomputed free-flow shortest-path baseline, while also reducing travel time and delay and increasing throughput in all evaluated networks.</p>
-          </div>
-        </details>
       </article>
 
       <article class="pub" id="pub-son">
         <div class="title">A Comprehensive Survey of Self-Organizing Networks in Next-Generation Cellular Systems</div>
         <div class="authors">Ardalan Siavashpour, <strong>Kasra Siavashpour</strong>, Masoumeh Azadegan, Bardia Safaei, Hossein Peyvandi, Muhammad Imran</div>
         <div class="meta"><span class="status prep">In preparation</span><span class="venue">for the IEEE Open Journal of the Communications Society (OJ-COMS)</span></div>
-        <details class="abstract">
-          <summary>Abstract</summary>
-          <div class="text">
-            <p>The increasing complexity of modern cellular networks, driven by ultra-dense deployments, heterogeneous architectures, and diverse service requirements, has rendered traditional manual network management approaches impractical. Self-Organizing Networks (SON) have emerged as a key enabler of autonomous operation by introducing self-configuration, self-optimization, and self-healing capabilities into radio access and backhaul infrastructures. Existing SON surveys, however, remain partial and 5G-centric. Broad treatments date from the early 5G period, while recent reviews examine a single function in isolation. Self-protection and self-learning are treated as prospective extensions rather than integral capabilities, and no survey analyzes the full SON function set in the context of 6G architectures. Motivated by these gaps, this paper presents a comprehensive survey of SON research, systematically reviewing architectural principles, closed-loop control mechanisms, performance objectives, control parameters, and algorithmic techniques across core SON functions. Beyond standardized 3GPP functionalities, emerging paradigms such as self-learning and self-protection are analyzed to capture the evolution of SON toward intelligent and predictive network management. The survey synthesizes optimization-based, heuristic, and learning-driven approaches, highlighting their trade-offs in scalability, adaptability, and operational robustness. Quantitative trends derived from 114 references illustrate the shifting research focus toward self-optimization and resilience in the 5G and beyond era. Finally, open challenges and future research directions are discussed, including conflict coordination among SON functions, explainable and federated learning, integration with non-terrestrial networks, and the role of SON in 6G-enabled architectures.</p>
-          </div>
-        </details>
       </article>
       <article class="pub" id="pub-lor">
         <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
         <div class="authors">Arash Vaezi, Amir Daneshgar, Arshia Dadras, <strong>Kasra Siavashpour</strong></div>
         <div class="meta"><span class="status prep">In preparation</span><span class="venue">for the IEEE Symposium on Foundations of Computer Science (FOCS) 2027</span><a href="https://arxiv.org/abs/2206.01121">Preliminary version on arXiv</a></div>
-        <details class="abstract">
-          <summary>Abstract</summary>
-          <div class="text">
-            <p>We introduce <em>LoR</em>, a reliable, scalable, fully decentralized, and distributed cooperative system, where <em>LoR</em> stands for &ldquo;Loop of the Rings&rdquo;. Distinct from conventional transaction-oriented systems, <em>LoR</em> handles cooperation using its ring-based randomized structure, making it suitable as both a cooperative workspace and a versatile platform for service provisioning, accommodating various roles such as freelancers, IoT management systems, and even 5G-related services. In <em>LoR</em> users access a reliable environment, enabling them to either share in or offer a predetermined set of services initially determined by an admin. <em>LoR</em> may also be implemented as a middleware that operates independent of the underlying infrastructure. Assuming a proportion of at least 60 percent of honest participants in an instance of <em>LoR</em>, the system provides reliability, scalability and satisfaction i.e. users may make occasional mistakes or face temporary issues such as network delays, yet those who act correctly will ultimately be satisfied by receiving their services or payments.</p>
-            <p>In addition to introducing <em>LoR</em>'s structure along with its operating rules in detail as our main contribution, we also provide mathematical analysis for the worst-case scenarios as well as a typical minimal real-case simulation supporting our theoretical results on <em>LoR</em>'s reliability, scalability and user satisfaction.</p>
-          </div>
-        </details>
       </article>
     </div>
   </section>
