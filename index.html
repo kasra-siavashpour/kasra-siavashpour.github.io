@@ -47,11 +47,20 @@
     }
     a { color: #1a5aa6; text-decoration: none; }
     a:hover { text-decoration: underline; }
-    h1 { font-size: 2rem; font-weight: normal; margin: 0 0 4px; }
-    h2 { font-size: 1.2rem; font-weight: bold; margin: 36px 0 10px; }
+    h1 { font-size: 2rem; font-weight: normal; margin: 0 0 10px; }
+    h2 { font-size: 1.2rem; font-weight: bold; margin: 32px 0 10px; }
     p { margin: 0 0 12px; }
     ul { margin: 0; padding-left: 20px; }
     li { margin-bottom: 8px; }
+    .tabs { display: flex; flex-wrap: wrap; gap: 4px 22px; border-bottom: 1px solid #ddd; margin-bottom: 28px; }
+    .tabs a { color: #555; padding: 4px 0 8px; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+    .tabs a:hover { color: #222; text-decoration: none; }
+    .tabs a[aria-current="page"] { color: #222; border-bottom-color: #222; }
+    .js .tab { display: none; }
+    .js .tab.active { display: block; }
+    .tab > h2:first-child { margin-top: 0; }
+    /* The tab already names the section; keep its heading for screen readers only. */
+    .js .tab > h2:first-child { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
     .about { display: flex; gap: 32px; align-items: flex-start; }
     .about img { width: 160px; height: 160px; object-fit: cover; object-position: 50% 20%; border-radius: 4px; flex: none; }
     .links { margin-top: 4px; }
@@ -61,19 +70,30 @@
     .news { list-style: none; padding: 0; }
     .news li { margin-bottom: 4px; }
     .news .date { display: inline-block; width: 80px; color: #666; }
-    footer { margin-top: 48px; font-size: .9rem; color: #666; }
+    footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid #eee; font-size: .9rem; color: #666; }
     @media (max-width: 600px) {
       .about { flex-direction: column-reverse; gap: 16px; }
       .about img { width: 120px; height: 120px; }
       .news .date { width: auto; margin-right: 8px; }
     }
   </style>
+  <script>document.documentElement.className = 'js';</script>
 </head>
 <body>
 
+<h1>Kasra Siavashpour</h1>
+<nav class="tabs" aria-label="Sections">
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#papers">Papers</a>
+  <a href="#teaching">Teaching</a>
+  <a href="#projects">Projects</a>
+  <a href="cv.pdf">CV</a>
+</nav>
+
+<section class="tab" id="about">
 <div class="about">
   <div>
-    <h1>Kasra Siavashpour</h1>
     <p>I am a research assistant at the <a href="https://www.ipm.ac.ir/">Institute for Research in Fundamental Sciences (IPM)</a> in Tehran, where I work with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Arash Vaezi</a> on fairness and reliability in multi-agent and decentralized systems. I finished my B.Sc. in Computer Science at the Department of Mathematical Sciences, <a href="https://en.sharif.ir/">Sharif University of Technology</a>, in 2026, and I am still a teaching assistant there.</p>
     <p>Much of my work so far has been building simulators to test theoretical results, and going back to the theory when the simulations disagree. I am also interested in networked and cyber-physical systems. I am applying to MSc programs for Fall 2027.</p>
     <p class="links">
@@ -93,13 +113,20 @@
   <li><span class="date">May 2026</span> Started working on fair routing at IPM.</li>
 </ul>
 
+<h2>Other</h2>
+<p>Outside research, I love playing table tennis and chess. If you are up for a game of either, let me know.</p>
+</section>
+
+<section class="tab" id="research">
 <h2>Research</h2>
 <p><b>Fair routing for multi-agent traffic.</b> When many vehicles share a road network, the route chosen for one changes the delay of the others. In FAIR, every traveller should end up with roughly the same ratio of actual to predicted travel time. I built the simulator and the evaluation on seven real city networks, where FAIR spreads delay far more evenly than shortest-path routing that ignores congestion. The simulations also turned up counterexamples to two lemmas in an earlier draft, which we then restated.</p>
 <p><b>The Loop of the Rings.</b> A decentralized system in which participants cooperate in randomly formed rings and are checked by randomly chosen verification teams, with no central authority. I co-developed the Go simulator with Arshia Dadras and ran the simulation study: with at least 60% honest participants, the verification teams were right more than 90% of the time.</p>
 <p><b>Self-organizing cellular networks.</b> A survey of how 5G and 6G networks configure, optimize, heal and protect themselves. I wrote it with Ardalan Siavashpour, supervised by <a href="https://loop.frontiersin.org/people/545066/overview">Hossein Peyvandi</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=dr3xMzgAAAAJ">Masoumeh Azadegan</a>.</p>
 <p class="muted">Earlier, I simulated a decentralized drone network (FANET) with ant-colony-based cluster routing in NS-3 with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Bardia Safaei</a>, and studied WebAssembly for systems acceleration with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Gianni Antichi</a> at Politecnico di Milano (remote).</p>
+</section>
 
-<h2>Manuscripts</h2>
+<section class="tab" id="papers">
+<h2>Papers</h2>
 <div class="paper">
   <div class="title">FAIR: A Novel Envy-Free Multi-Agent Model for Traffic Systems</div>
   <div>Arash Vaezi, Sepideh Niknejad, <b>Kasra Siavashpour</b>, Arshia Dadras</div>
@@ -115,20 +142,23 @@
   <div><b>Kasra Siavashpour</b>, with Arash Vaezi, Amir Daneshgar and Arshia Dadras (author order not final)</div>
   <div class="muted">In preparation for FOCS 2027 &middot; <a href="https://arxiv.org/abs/2206.01121">arXiv preprint</a></div>
 </div>
+</section>
 
+<section class="tab" id="teaching">
 <h2>Teaching</h2>
 <p>Teaching assistant at Sharif for Computer Networks (with Mahdi Dolati, Hossein Peyvandi and Kambiz Mizanian) and Operating Systems (with Hossein Asadi, Rasul Jalili, Arash Vaezi, Mohaddeseh Mirbeygi and MohammadAli Mirzaei), eight offerings since 2023 (<a href="https://piazza.com/sharif/winter2024/22861/info">Piazza page</a> for Operating Systems, Winter 2024).</p>
+</section>
 
-<h2>Course projects</h2>
+<section class="tab" id="projects">
+<h2>Projects</h2>
+<p>Course projects from my B.Sc.:</p>
 <ul>
   <li><a href="https://github.com/sharif-go-lab/SliceDB">SliceDB</a>: a sharded key-value store in Go with replication, etcd-based failover and online resharding (with Ardalan Siavashpour).</li>
   <li><a href="https://github.com/kasra-sia/vector-search-product-rag">Multimodal product search</a>: text and image product search with CLIP and FAISS on real shopping data from Torob.</li>
   <li><a href="https://github.com/sharif-go-lab/nyc-taxi-hdfs-spark-ha">Highly available HDFS + Spark</a>: HDFS with automatic NameNode failover, running Spark jobs on NYC taxi data (with Ardalan Siavashpour).</li>
   <li><a href="https://github.com/sharif-go-lab/go-judge-platform">Go Judge</a>: an online judge that runs each submission in a Docker sandbox (with Ardalan Siavashpour).</li>
 </ul>
-
-<h2>Other</h2>
-<p>Outside research, I love playing table tennis and chess. If you are up for a game of either, let me know.</p>
+</section>
 
 <footer>
   <a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a> &middot;
@@ -136,5 +166,32 @@
   Last updated October 2026
 </footer>
 
+<script>
+  // One section at a time; the address bar keeps the open tab (#research ...),
+  // so a tab can be linked directly. Without JavaScript every section shows.
+  (function () {
+    var tabs = document.querySelectorAll('.tab');
+    var links = document.querySelectorAll('.tabs a[href^="#"]');
+    function show(id) {
+      if (!document.getElementById(id) || !document.getElementById(id).classList.contains('tab')) id = 'about';
+      tabs.forEach(function (t) { t.classList.toggle('active', t.id === id); });
+      links.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'page');
+        else a.removeAttribute('aria-current');
+      });
+    }
+    links.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var id = a.getAttribute('href').slice(1);
+        history.pushState(null, '', '#' + id);
+        show(id);
+        window.scrollTo(0, 0);
+      });
+    });
+    window.addEventListener('popstate', function () { show(location.hash.slice(1)); });
+    show(location.hash.slice(1));
+  })();
+</script>
 </body>
 </html>
