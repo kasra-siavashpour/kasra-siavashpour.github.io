@@ -5,17 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kasra Siavashpour</title>
 
-  <meta name="description" content="Kasra Siavashpour, researcher at the Institute for Research in Fundamental Sciences (IPM). Distributed and decentralized systems, multi-agent systems, IoT and AI-driven network automation.">
+  <meta name="description" content="Kasra Siavashpour, research assistant at the Institute for Research in Fundamental Sciences (IPM). Multi-agent and decentralized systems, networked systems.">
   <link rel="canonical" href="https://kasra-siavashpour.github.io/">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="color-scheme" content="light dark">
-
   <meta property="og:title" content="Kasra Siavashpour">
-  <meta property="og:description" content="Researcher at IPM working on multi-agent and decentralized systems.">
+  <meta property="og:description" content="Research assistant at IPM working on multi-agent and decentralized systems.">
   <meta property="og:url" content="https://kasra-siavashpour.github.io/">
   <meta property="og:type" content="profile">
   <meta property="og:image" content="https://kasra-siavashpour.github.io/images/profile.jpg">
-  <meta name="twitter:card" content="summary">
 
   <script type="application/ld+json">
   {
@@ -26,7 +22,7 @@
       "name": "Kasra Siavashpour",
       "url": "https://kasra-siavashpour.github.io/",
       "image": "https://kasra-siavashpour.github.io/images/profile.jpg",
-      "jobTitle": "Researcher",
+      "jobTitle": "Research Assistant",
       "worksFor": {
         "@type": "ResearchOrganization",
         "name": "Institute for Research in Fundamental Sciences (IPM)"
@@ -35,7 +31,6 @@
         "@type": "CollegeOrUniversity",
         "name": "Sharif University of Technology"
       },
-      "knowsAbout": ["Distributed systems", "Decentralized systems", "Multi-agent systems", "Internet of Things", "Network automation"],
       "sameAs": [
         "https://github.com/kasra-sia",
         "https://www.linkedin.com/in/kasra-siavashpour"
@@ -44,333 +39,102 @@
   }
   </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
-    :root {
-      --bg: #fcfbf8;
-      --ink: #1c1f23;
-      --muted: #5a626d;
-      --faint: #858c96;
-      --line: #e6e1d8;
-      --link: #9a3b1a;
-      --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root:not([data-theme="light"]) {
-        --bg: #141619;
-        --ink: #e9e6e0;
-        --muted: #a5adb7;
-        --faint: #7f8790;
-        --line: #2b3037;
-        --link: #ec8e66;
-      }
-    }
-    :root[data-theme="dark"] {
-      --bg: #141619;
-      --ink: #e9e6e0;
-      --muted: #a5adb7;
-      --faint: #7f8790;
-      --line: #2b3037;
-      --link: #ec8e66;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-padding-top: 64px; }
     body {
-      background: var(--bg); color: var(--ink);
-      font-family: var(--sans); font-size: 16px; line-height: 1.65;
-      -webkit-font-smoothing: antialiased; overflow-x: hidden;
+      max-width: 760px; margin: 0 auto; padding: 40px 16px 60px;
+      background: #fff; color: #222;
+      font-family: Georgia, "Times New Roman", serif; font-size: 17px; line-height: 1.6;
     }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; text-underline-offset: 3px; }
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; border-radius: 3px; }
-    .wrap { max-width: 780px; margin: 0 auto; padding: 0 16px; }
-
-    /* Nav */
-    .topbar {
-      position: sticky; top: 0; z-index: 10; background: var(--bg);
-      border-bottom: 1px solid var(--line);
+    a { color: #1a5aa6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    h1 { font-size: 2rem; font-weight: normal; margin: 0 0 4px; }
+    h2 { font-size: 1.2rem; font-weight: bold; margin: 36px 0 10px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .about { display: flex; gap: 32px; align-items: flex-start; }
+    .about img { width: 160px; height: 160px; object-fit: cover; object-position: 50% 20%; border-radius: 4px; flex: none; }
+    .links { margin-top: 4px; }
+    .muted { color: #666; }
+    .paper { margin-bottom: 14px; }
+    .paper .title { font-weight: bold; }
+    .news { list-style: none; padding: 0; }
+    .news li { margin-bottom: 4px; }
+    .news .date { display: inline-block; width: 80px; color: #666; }
+    footer { margin-top: 48px; font-size: .9rem; color: #666; }
+    @media (max-width: 600px) {
+      .about { flex-direction: column-reverse; gap: 16px; }
+      .about img { width: 120px; height: 120px; }
+      .news .date { width: auto; margin-right: 8px; }
     }
-    .topbar .wrap { display: flex; align-items: center; gap: 12px; height: 52px; }
-    .brand { font-family: var(--serif); font-weight: 600; color: var(--ink); white-space: nowrap; }
-    .brand:hover { text-decoration: none; }
-    .nav { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
-    .nav::-webkit-scrollbar { display: none; }
-    .nav a { font-size: .875rem; color: var(--muted); padding: 4px 9px; white-space: nowrap; }
-    .nav a:hover { color: var(--ink); text-decoration: none; }
-    .theme-toggle {
-      flex: none; width: 30px; height: 30px; display: grid; place-items: center;
-      border: 1px solid var(--line); border-radius: 999px; background: none; color: var(--muted); cursor: pointer;
-    }
-    .theme-toggle:hover { color: var(--ink); }
-
-    /* Intro */
-    .intro { padding: 44px 0 28px; }
-    .intro .wrap { display: grid; grid-template-columns: 1fr; gap: 24px; }
-    @media (min-width: 680px) { .intro .wrap { grid-template-columns: 1fr 170px; gap: 40px; align-items: start; } }
-    .intro img {
-      width: 170px; height: 170px; object-fit: cover; object-position: 50% 20%; border-radius: 50%;
-    }
-    @media (max-width: 679px) { .intro img { order: -1; width: 128px; height: 128px; } }
-    h1 { font-family: var(--serif); font-size: clamp(2rem, 5vw, 2.5rem); line-height: 1.15; font-weight: 700; }
-    .role { color: var(--muted); margin: 4px 0 16px; }
-    .intro p + p { margin-top: 12px; }
-    .links { margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .95rem; }
-
-    /* Sections */
-    section.block { padding: 30px 0; border-top: 1px solid var(--line); }
-    h2 { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; margin-bottom: 14px; }
-    h3 { font-size: 1rem; font-weight: 600; }
-    .muted { color: var(--muted); }
-    .small { font-size: .9rem; }
-
-    .news { list-style: none; }
-    .news li { display: grid; grid-template-columns: 76px 1fr; gap: 14px; padding: 4px 0; }
-    .news time { color: var(--faint); font-size: .88rem; padding-top: 2px; }
-
-    .entries { list-style: none; }
-    .entries > li { padding: 10px 0; }
-    .entries > li + li { border-top: 1px solid var(--line); }
-    .entries .head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
-    .entries .when { color: var(--faint); font-size: .88rem; white-space: nowrap; }
-    .entries p { margin-top: 4px; }
-
-    .pub .title { font-weight: 600; }
-    .pub .authors { color: var(--muted); font-size: .94rem; }
-    .pub .venue { font-size: .94rem; font-style: italic; color: var(--muted); }
-
-    .courses { display: grid; gap: 18px; margin: 4px 0 14px; }
-    @media (min-width: 680px) { .courses { grid-template-columns: 1fr 1fr; gap: 28px; } }
-    .courses ul { list-style: none; margin-top: 4px; }
-    .courses li { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: .94rem; }
-    .courses li span:last-child { color: var(--faint); white-space: nowrap; font-size: .88rem; }
-
-    footer { border-top: 1px solid var(--line); padding: 26px 0 40px; font-size: .92rem; }
-    footer .contact { display: flex; flex-wrap: wrap; gap: 6px 16px; }
-    footer .fine { margin-top: 14px; color: var(--faint); font-size: .82rem; }
   </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div class="wrap">
-    <a class="brand" href="#top">Kasra Siavashpour</a>
-    <nav class="nav" aria-label="Sections">
-      <a href="#news">News</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#projects">Projects</a>
-      <a href="cv.pdf">CV</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch color theme"><svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+<div class="about">
+  <div>
+    <h1>Kasra Siavashpour</h1>
+    <p>I am a research assistant at the <a href="https://www.ipm.ac.ir/">Institute for Research in Fundamental Sciences (IPM)</a> in Tehran, where I work with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Arash Vaezi</a> on fairness and reliability in multi-agent and decentralized systems. I finished my B.Sc. in Computer Science at the Department of Mathematical Sciences, <a href="https://en.sharif.ir/">Sharif University of Technology</a>, in 2026, and I am still a teaching assistant there.</p>
+    <p>Much of my work so far has been building simulators to test theoretical results, and going back to the theory when the simulations disagree. I am also interested in networked and cyber-physical systems. I am applying to MSc programs for Fall 2027.</p>
+    <p class="links">
+      <a href="mailto:kasra.siavashpour@gmail.com">Email</a> &middot;
+      <a href="cv.pdf">CV</a> &middot;
+      <a href="https://github.com/kasra-sia">GitHub</a> &middot;
+      <a href="https://www.linkedin.com/in/kasra-siavashpour">LinkedIn</a>
+    </p>
   </div>
-</header>
+  <img src="images/profile.jpg" alt="Kasra Siavashpour" width="160" height="160">
+</div>
 
-<main id="top">
+<h2>News</h2>
+<ul class="news">
+  <li><span class="date">Sep 2026</span> TA for Computer Networks and Operating Systems at Sharif this fall.</li>
+  <li><span class="date">Jul 2026</span> Finished my B.Sc. at Sharif.</li>
+  <li><span class="date">May 2026</span> Started working on fair routing at IPM.</li>
+</ul>
 
-  <section class="intro">
-    <div class="wrap">
-      <div>
-        <h1>Kasra Siavashpour</h1>
-        <div class="role">Researcher, Institute for Research in Fundamental Sciences (IPM)</div>
-        <p>I am a researcher at <a href="https://www.ipm.ac.ir/">IPM</a> in Tehran, working with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a> on fair routing for multi-agent traffic and on decentralized cooperative systems. I studied Computer Science at <a href="https://en.sharif.ir/">Sharif University of Technology</a>, where I am also a teaching assistant for Computer Networks and Operating Systems.</p>
-        <p>I am interested in distributed and decentralized systems, IoT and cyber-physical systems, multi-agent systems, and AI-driven network automation. I am currently applying to graduate programs.</p>
-        <div class="links">
-          <a href="cv.pdf">CV</a>
-          <a href="mailto:kasra.siavashpour@gmail.com">Email</a>
-          <a href="https://github.com/kasra-sia">GitHub</a>
-          <a href="https://www.linkedin.com/in/kasra-siavashpour">LinkedIn</a>
-        </div>
-      </div>
-      <img src="images/profile.jpg" alt="Kasra Siavashpour" width="170" height="170">
-    </div>
-  </section>
+<h2>Research</h2>
+<p><b>Fair routing for multi-agent traffic.</b> When many vehicles share a road network, the route chosen for one changes the delay of the others. In FAIR, every traveller should end up with roughly the same ratio of actual to predicted travel time. I built the simulator and the evaluation on seven real city networks, where FAIR spreads delay far more evenly than shortest-path routing that ignores congestion. The simulations also turned up counterexamples to two lemmas in an earlier draft, which we then restated.</p>
+<p><b>The Loop of the Rings.</b> A decentralized system in which participants cooperate in randomly formed rings and are checked by randomly chosen verification teams, with no central authority. I co-developed the Go simulator with Arshia Dadras and ran the simulation study: with at least 60% honest participants, the verification teams were right more than 90% of the time.</p>
+<p><b>Self-organizing cellular networks.</b> A survey of how 5G and 6G networks configure, optimize, heal and protect themselves. I wrote it with Ardalan Siavashpour, supervised by <a href="https://loop.frontiersin.org/people/545066/overview">Hossein Peyvandi</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=dr3xMzgAAAAJ">Masoumeh Azadegan</a>.</p>
+<p class="muted">Earlier, I simulated a decentralized drone network (FANET) with ant-colony-based cluster routing in NS-3 with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Bardia Safaei</a>, and studied WebAssembly for systems acceleration with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Gianni Antichi</a> at Politecnico di Milano (remote).</p>
 
-  <section class="block" id="news">
-    <div class="wrap">
-      <h2>News</h2>
-      <ul class="news">
-        <li><time datetime="2026-09">Sep 2026</time><span>Submitted the abstract of FAIR to AAMAS 2027.</span></li>
-        <li><time datetime="2026-09">Sep 2026</time><span>TA for Computer Networks with Dr.&nbsp;Mahdi Dolati and Operating Systems with Dr.&nbsp;Hossein Asadi this fall.</span></li>
-        <li><time datetime="2026-05">May 2026</time><span>Started working on FAIR at IPM with Dr.&nbsp;Arash Vaezi.</span></li>
-      </ul>
-    </div>
-  </section>
+<h2>Manuscripts</h2>
+<div class="paper">
+  <div class="title">FAIR: A Novel Envy-Free Multi-Agent Model for Traffic Systems</div>
+  <div>Arash Vaezi, Sepideh Niknejad, <b>Kasra Siavashpour</b>, Arshia Dadras</div>
+  <div class="muted">Submitted to AAMAS 2027</div>
+</div>
+<div class="paper">
+  <div class="title">A Comprehensive Survey of Self-Organizing Networks in Next-Generation Cellular Systems</div>
+  <div>Ardalan Siavashpour, <b>Kasra Siavashpour</b>, Masoumeh Azadegan, Bardia Safaei, Hossein Peyvandi, Muhammad Imran</div>
+  <div class="muted">To be submitted to the IEEE Open Journal of the Communications Society</div>
+</div>
+<div class="paper">
+  <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
+  <div><b>Kasra Siavashpour</b>, with Arash Vaezi, Amir Daneshgar and Arshia Dadras (author order not final)</div>
+  <div class="muted">In preparation for FOCS 2027 &middot; <a href="https://arxiv.org/abs/2206.01121">arXiv preprint</a></div>
+</div>
 
-  <section class="block" id="research">
-    <div class="wrap">
-      <h2>Research</h2>
-      <ul class="entries">
-        <li>
-          <h3>FAIR: envy-free routing for multi-agent traffic</h3>
-          <p>A routing model in which no vehicle envies another's share of the delay, with a guarantee that holds at every step of a trip. I built the evaluation simulator, which runs on 7 city road networks with up to 132K trips each. When it contradicted two of our lemmas, we revised them.</p>
-        </li>
-        <li>
-          <h3>The Loop of the Rings: decentralized cooperation</h3>
-          <p>A fully decentralized cooperative system built from randomized rings of participants; with at least 60% honest participants, everyone who acts correctly gets their service or payment. I contributed to the worst-case analysis, implemented the protocol core in Go, and ran the simulations that test the theory. <a href="https://arxiv.org/abs/2206.01121">arXiv</a></p>
-        </li>
-        <li>
-          <h3>A survey of self-organizing cellular networks</h3>
-          <p>A survey of how 5G and 6G networks configure, optimize, heal and protect themselves. I wrote about half of the survey and reviewed about half of its 114 papers.</p>
-        </li>
-      </ul>
-      <p class="muted small" style="margin-top:10px">Earlier, I worked on nature-inspired cluster routing for FANET and IoT networks with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a>, and on WebAssembly for systems acceleration with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Dr.&nbsp;Gianni Antichi</a> (Politecnico di Milano).</p>
-    </div>
-  </section>
+<h2>Teaching</h2>
+<p>Teaching assistant at Sharif for Computer Networks (with Mahdi Dolati, Hossein Peyvandi and Kambiz Mizanian) and Operating Systems (with Hossein Asadi, Rasul Jalili, Arash Vaezi, Mohaddeseh Mirbeygi and MohammadAli Mirzaei), eight offerings since 2023 (<a href="https://piazza.com/sharif/winter2024/22861/info">Piazza page</a> for Operating Systems, Winter 2024).</p>
 
-  <section class="block" id="publications">
-    <div class="wrap">
-      <h2>Publications</h2>
-      <ul class="entries">
-        <li class="pub">
-          <div class="title">FAIR: A Novel Envy-Free Multi-Agent Model for Traffic Systems</div>
-          <div class="authors">Arash Vaezi, Sepideh Niknejad, <strong>Kasra Siavashpour</strong>, Arshia Dadras</div>
-          <div class="venue">In preparation for AAMAS 2027 (abstract submitted)</div>
-        </li>
-        <li class="pub">
-          <div class="title">A Comprehensive Survey of Self-Organizing Networks in Next-Generation Cellular Systems</div>
-          <div class="authors">Ardalan Siavashpour, <strong>Kasra Siavashpour</strong>, Masoumeh Azadegan, Bardia Safaei, Hossein Peyvandi, Muhammad Imran</div>
-          <div class="venue">In preparation for the IEEE Open Journal of the Communications Society</div>
-        </li>
-        <li class="pub">
-          <div class="title">The Loop of the Rings: A Fully Decentralized Reliable Cooperative System</div>
-          <div class="authors">Arash Vaezi, Amir Daneshgar, Arshia Dadras, <strong>Kasra Siavashpour</strong></div>
-          <div class="venue">In preparation for FOCS 2027 &middot; <a href="https://arxiv.org/abs/2206.01121">arXiv</a></div>
-        </li>
-      </ul>
-    </div>
-  </section>
+<h2>Course projects</h2>
+<ul>
+  <li><a href="https://github.com/sharif-go-lab/SliceDB">SliceDB</a>: a sharded key-value store in Go with replication, etcd-based failover and online resharding (with Ardalan Siavashpour).</li>
+  <li><a href="https://github.com/kasra-sia/vector-search-product-rag">Multimodal product search</a>: text and image product search with CLIP and FAISS on real shopping data from Torob.</li>
+  <li><a href="https://github.com/sharif-go-lab/nyc-taxi-hdfs-spark-ha">Highly available HDFS + Spark</a>: HDFS with automatic NameNode failover, running Spark jobs on NYC taxi data (with Ardalan Siavashpour).</li>
+  <li><a href="https://github.com/sharif-go-lab/go-judge-platform">Go Judge</a>: an online judge that runs each submission in a Docker sandbox (with Ardalan Siavashpour).</li>
+</ul>
 
-  <section class="block" id="experience">
-    <div class="wrap">
-      <h2>Experience</h2>
-      <ul class="entries">
-        <li>
-          <div class="head"><h3>Researcher, IPM</h3><span class="when">May 2026 &ndash; Present</span></div>
-          <p class="muted small">FAIR, with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a></p>
-        </li>
-        <li>
-          <div class="head"><h3>Research Assistant, IPM &amp; Sharif University of Technology</h3><span class="when">Aug 2024 &ndash; Present</span></div>
-          <p class="muted small">The Loop of the Rings, with <a href="https://scholar.google.com/citations?user=V-147yoAAAAJ&amp;hl=en">Dr.&nbsp;Arash Vaezi</a> and <a href="https://scholar.google.com/citations?user=P2u-2f0AAAAJ&amp;hl=en">Dr.&nbsp;Amir Daneshgar</a></p>
-        </li>
-        <li>
-          <div class="head"><h3>Research Assistant, Sharif University of Technology</h3><span class="when">Aug 2024 &ndash; Present</span></div>
-          <p class="muted small">Self-organizing networks survey, with <a href="https://loop.frontiersin.org/people/545066/overview">Dr.&nbsp;Hossein Peyvandi</a> and <a href="https://scholar.google.com/citations?hl=en&amp;user=dr3xMzgAAAAJ">Dr.&nbsp;Masoumeh Azadegan</a> (Khatam University); collaborators <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a> and <a href="https://scholar.google.com/citations?user=HBQjTKIAAAAJ&amp;hl=en">Dr.&nbsp;Muhammad Imran</a> (University of Glasgow)</p>
-        </li>
-        <li>
-          <div class="head"><h3>Research Assistant, Politecnico di Milano (remote)</h3><span class="when">May 2024 &ndash; Aug 2024</span></div>
-          <p class="muted small">WebAssembly for systems acceleration, with <a href="https://scholar.google.com/citations?user=3VedTqcAAAAJ&amp;hl=en">Dr.&nbsp;Gianni Antichi</a></p>
-        </li>
-        <li>
-          <div class="head"><h3>Research Assistant, Sharif University of Technology</h3><span class="when">Oct 2023 &ndash; Jan 2024</span></div>
-          <p class="muted small">FANET and IoT cluster routing, with <a href="https://scholar.google.com/citations?hl=en&amp;user=SVrMscYAAAAJ">Dr.&nbsp;Bardia Safaei</a></p>
-        </li>
-        <li>
-          <div class="head"><h3>B.Sc. in Computer Science, Sharif University of Technology</h3><span class="when">2020 &ndash; 2026</span></div>
-          <p class="muted small">Admitted with a rank in the top 0.1% of 155,250 candidates in the national university entrance exam.</p>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="block" id="teaching">
-    <div class="wrap">
-      <h2>Teaching</h2>
-      <p>I have been a teaching assistant at Sharif University of Technology for two courses:</p>
-      <div class="courses">
-        <div>
-          <h3>Computer Networks</h3>
-          <ul>
-            <li><span>Dr.&nbsp;Mahdi Dolati</span><span>Fall 2026, Winter 2026</span></li>
-            <li><span>Dr.&nbsp;Hossein Peyvandi</span><span>Winter 2024</span></li>
-            <li><span>Dr.&nbsp;Kambiz Mizanian</span><span>Fall 2023</span></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Operating Systems</h3>
-          <ul>
-            <li><span>Dr.&nbsp;Hossein Asadi</span><span>Fall 2026</span></li>
-            <li><span>Dr.&nbsp;Hossein Asadi &amp; Dr.&nbsp;Rasul Jalili</span><span>Fall 2024</span></li>
-            <li><span>Dr.&nbsp;Arash Vaezi (<a href="https://piazza.com/sharif/winter2024/22861/info">Piazza</a>)</span><span>Winter 2024</span></li>
-            <li><span>Dr.&nbsp;Mohaddeseh Mirbeygi &amp; Dr.&nbsp;MohammadAli Mirzaei</span><span>Fall 2023</span></li>
-          </ul>
-        </div>
-      </div>
-      <p>I design and grade the weekly assignments, write their rubrics and hold office hours. In Operating Systems I guide the course projects on threads, scheduling and IPC; in Computer Networks I built autograders for the assignments.</p>
-    </div>
-  </section>
-
-  <section class="block" id="projects">
-    <div class="wrap">
-      <h2>Projects</h2>
-      <ul class="entries">
-        <li>
-          <div class="head"><h3><a href="https://github.com/sharif-go-lab/SliceDB">SliceDB</a></h3><span class="when">2025 &ndash; 2026</span></div>
-          <p>A sharded key-value store in Go with write-ahead-log replication, leader election through etcd, automatic failover and online resharding.</p>
-        </li>
-        <li>
-          <div class="head"><h3><a href="https://github.com/kasra-sia/vector-search-product-rag">Multimodal product search</a></h3><span class="when">2025 &ndash; 2026</span></div>
-          <p>Text and image search over 1M products with CLIP and FAISS, evaluated on 5,000 real user queries.</p>
-        </li>
-        <li>
-          <div class="head"><h3><a href="https://github.com/sharif-go-lab/nyc-taxi-hdfs-spark-ha">Highly available HDFS + Spark</a></h3><span class="when">2025</span></div>
-          <p>HDFS with automatic NameNode failover, running Spark queries on NYC taxi data (team of two).</p>
-        </li>
-        <li>
-          <div class="head"><h3><a href="https://github.com/sharif-go-lab/go-judge-platform">Go Judge</a></h3><span class="when">2025</span></div>
-          <p>An online judge that runs each submission in a Docker sandbox; I built the web server, UI and database schema (team of two).</p>
-        </li>
-        <li>
-          <div class="head"><h3><a href="https://github.com/sharif-go-lab/go-download-manager">Go download manager</a></h3><span class="when">2025</span></div>
-          <p>A terminal downloader with parallel range requests, pause/resume and per-queue speed limits (team of two).</p>
-        </li>
-      </ul>
-      <p class="muted small" style="margin-top:10px">More on <a href="https://github.com/kasra-sia">GitHub</a>.</p>
-    </div>
-  </section>
-
-  <section class="block" id="hobbies">
-    <div class="wrap">
-      <h2>Hobbies</h2>
-      <p>Outside research, I love playing table tennis and chess. If you are up for a game of either, let me know.</p>
-    </div>
-  </section>
-</main>
+<h2>Other</h2>
+<p>Outside research, I love playing table tennis and chess. If you are up for a game of either, let me know.</p>
 
 <footer>
-  <div class="wrap">
-    <div class="contact">
-      <a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a>
-      <a href="mailto:kasra.siavashpour@sharif.edu">kasra.siavashpour@sharif.edu</a>
-      <a href="https://github.com/kasra-sia">GitHub</a>
-      <a href="https://www.linkedin.com/in/kasra-siavashpour">LinkedIn</a>
-    </div>
-    <p class="fine">Last updated October 2026</p>
-  </div>
+  <a href="mailto:kasra.siavashpour@gmail.com">kasra.siavashpour@gmail.com</a> &middot;
+  <a href="mailto:kasra.siavashpour@sharif.edu">kasra.siavashpour@sharif.edu</a><br>
+  Last updated October 2026
 </footer>
 
-<script>
-  // Theme toggle: follows the system until the visitor picks one.
-  (function () {
-    var root = document.documentElement;
-    try {
-      var saved = localStorage.getItem('theme');
-      if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
-    } catch (e) {}
-    document.getElementById('themeToggle').addEventListener('click', function () {
-      var current = root.getAttribute('data-theme') ||
-        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-      var next = current === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-theme', next);
-      try { localStorage.setItem('theme', next); } catch (e) {}
-    });
-  })();
-</script>
 </body>
 </html>
