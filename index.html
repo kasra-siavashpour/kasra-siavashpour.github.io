@@ -70,11 +70,15 @@
     .news { list-style: none; padding: 0; }
     .news li { margin-bottom: 4px; }
     .news .date { display: inline-block; width: 80px; color: #666; }
+    .ta { list-style: none; padding: 0; margin-bottom: 14px; }
+    .ta li { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 4px; }
+    .ta .term { color: #666; white-space: nowrap; }
     footer { margin-top: 48px; padding-top: 14px; border-top: 1px solid #eee; font-size: .9rem; color: #666; }
     @media (max-width: 600px) {
       .about { flex-direction: column-reverse; gap: 16px; }
       .about img { width: 120px; height: 120px; }
       .news .date { width: auto; margin-right: 8px; }
+      .ta li { flex-direction: column; gap: 0; margin-bottom: 8px; }
     }
   </style>
   <script>document.documentElement.className = 'js';</script>
@@ -147,7 +151,17 @@
 
 <section class="tab" id="teaching">
 <h2>Teaching</h2>
-<p>Teaching assistant at Sharif for Computer Networks (with Mahdi Dolati, Hossein Peyvandi and Kambiz Mizanian) and Operating Systems (with Hossein Asadi, Rasul Jalili, Arash Vaezi, Mohaddeseh Mirbeygi and MohammadAli Mirzaei), eight offerings since 2023 (<a href="https://piazza.com/sharif/winter2024/22861/info">Piazza page</a> for Operating Systems, Winter 2024).</p>
+<p><b>Teaching Assistant</b>, Sharif University of Technology</p>
+<ul class="ta">
+  <li><span><b>Computer Networks</b> &mdash; Dr.&nbsp;Mahdi Dolati</span><span class="term">Fall 2026, Winter 2026</span></li>
+  <li><span><b>Operating Systems</b> &mdash; Dr.&nbsp;Hossein Asadi</span><span class="term">Fall 2026</span></li>
+  <li><span><b>Operating Systems</b> &mdash; Dr.&nbsp;Hossein Asadi &amp; Dr.&nbsp;Rasul Jalili</span><span class="term">Fall 2024</span></li>
+  <li><span><b>Computer Networks</b> &mdash; Dr.&nbsp;Hossein Peyvandi</span><span class="term">Winter 2024</span></li>
+  <li><span><b>Operating Systems</b> &mdash; Dr.&nbsp;Arash Vaezi (<a href="https://piazza.com/sharif/winter2024/22861/info">Piazza</a>)</span><span class="term">Winter 2024</span></li>
+  <li><span><b>Computer Networks</b> &mdash; Dr.&nbsp;Kambiz Mizanian</span><span class="term">Fall 2023</span></li>
+  <li><span><b>Operating Systems</b> &mdash; Dr.&nbsp;Mohaddeseh Mirbeygi &amp; Dr.&nbsp;MohammadAli Mirzaei</span><span class="term">Fall 2023</span></li>
+</ul>
+<p>Designed and graded weekly assignments (120+ students in the largest classes), wrote rubrics, held office hours, guided projects and built autograders.</p>
 </section>
 
 <section class="tab" id="projects">
